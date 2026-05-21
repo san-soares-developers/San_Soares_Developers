@@ -87,104 +87,62 @@ nav {
 .logo-text span {
     color: var(--primary);
 }
-
-/* Banner de Fundo Avançado (Hero Section) */
-/* .hero-banner {
-    background-color: var(--dark-bg);
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
-        linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
-    padding: 110px 0;
-    color: #ffffff;
-    border-bottom: 4px solid var(--primary);
-    text-align: center;
-} */
-
-
-/* 2. O Novo Banner com Fundo Premium de Alta Tecnologia (Leve e Claro) */
+/* O Banner agora vira um container limpo com fundo claro */
 .hero-banner {
-    /* Saem os tijolos escuros com texto e entra um degradê tecnológico suave e moderno */
     background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-    background-image: 
-        radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
-        radial-gradient(circle at 10% 90%, rgba(37, 99, 235, 0.04) 0%, transparent 40%);
-    
-    padding: 90px 0;
-    color: #0f172a; /* TEXTO ESCURO PARA LEITURA PERFEITA */
+    padding: 60px 0;
     text-align: center;
     border-bottom: 4px solid var(--primary);
-    position: relative;
 }
-
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza rigorosamente todos os elementos na horizontal */
 }
 
-/* .hero-banner h1 {
-    font-size: 42px;
-    font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -1px;
-    margin-bottom: 24px;
-} */
-
-/* Ajuste de contraste para o Título Principal */
 .hero-banner h1 {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 30px;
     line-height: 1.2;
-    letter-spacing: -1px;
-    color: #0f172a; /* Grafite bem escuro */
-    margin-bottom: 24px;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.hero-banner h1 span {
-    background: linear-gradient(to right, #ffffff, var(--primary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: var(--primary); /* Destaca o "Soluções SaaS" com o verde da logo */
+/* Container para isolar e controlar a imagem no meio */
+.banner-logo-wrapper {
+    margin: 20px 0 30px 0; /* Controla o respiro acima e abaixo da imagem */
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-/* .hero-banner p {
-    font-size: 18px;
-    color: #94a3b8;
-    margin-bottom: 35px;
-} */
-
-/* Ajuste de contraste para o Subtítulo */
-.hero-banner p {
-    font-size: 18px;
-    color: #475569; /* Cinza focado em leitura */
-    margin-bottom: 35px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+/* Controla o tamanho exato e a nitidez da imagem centralizada */
+.banner-logo-mid {
+    max-width: 350px; /* Reduz o tamanho da imagem para ela ficar menor no meio */
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Detalhe estético para suavizar as bordas dos tijolos */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* Sombra elegante de flutuação */
+    object-fit: contain;
 }
 
-.hero-banner {
-    /* Camada 1: Máscara escura para dar contraste ao texto branco */
-    /* Camada 2: Chamada da sua imagem do S centralizado */
-    background-image: 
-        linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.85)), 
-        url('../img/banner.jpg');
-    
-    /* Propriedades para travar a imagem sem distorcer em nenhuma tela */
-    background-size: cover;       /* Força a imagem a preencher todo o banner */
-    background-position: center;   /* Mantém o "S" rigorosamente centralizado */
-    background-repeat: no-repeat;  /* Impede a imagem de duplicar em telas grandes */
-    
-    padding: 120px 0;
-    color: #ffffff;
-    border-bottom: 4px solid var(--primary);
-    position: relative;
+.hero-description {
+    font-size: 17px;
+    color: #475569;
+    max-width: 750px;
+    margin-bottom: 12px;
+}
+
+/* Estilização específica para os dizeres técnicos */
+.hero-tags {
+    font-size: 15px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    margin-bottom: 35px; /* Empurra o botão de ação para baixo */
 }
 
 
