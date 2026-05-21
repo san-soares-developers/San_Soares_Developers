@@ -30,6 +30,8 @@ body {
 }
 
 /* Navbar Premium com Efeito Vidro */
+/* Aplica o respiro e distanciamento 
+sênior entre o menu e o banner */
 nav {
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
@@ -38,6 +40,9 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    
+    /* Afasta todo o conteúdo de baixo, criando a distância desejada */
+    margin-bottom: 90px; 
 }
 
 .nav-container {
@@ -46,26 +51,14 @@ nav {
     align-items: center;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+/* Controla o tamanho e a proporção da imagem da logo no menu */
+.logo-topo {
+    height: 40px; /* Altura ideal e discreta para a barra superior */
+    width: auto;  /* Mantém a proporção perfeita do S sem distorcer */
+    object-fit: contain;
 }
 
-/* Ícone do "S" Estilizado em CSS Puro no topo */
-.logo-icon-css {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
-}
+
 
 .logo-text {
     font-size: 20px;
@@ -112,11 +105,30 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-banner p {
+/* .hero-banner p {
     font-size: 18px;
     color: #94a3b8;
     margin-bottom: 35px;
+} */
+
+.hero-banner {
+    /* Camada 1: Máscara escura para dar contraste ao texto branco */
+    /* Camada 2: Chamada da sua imagem do S centralizado */
+    background-image: 
+        linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.85)), 
+        url('../img/banner.jpg');
+    
+    /* Propriedades para travar a imagem sem distorcer em nenhuma tela */
+    background-size: cover;       /* Força a imagem a preencher todo o banner */
+    background-position: center;   /* Mantém o "S" rigorosamente centralizado */
+    background-repeat: no-repeat;  /* Impede a imagem de duplicar em telas grandes */
+    
+    padding: 120px 0;
+    color: #ffffff;
+    border-bottom: 4px solid var(--primary);
+    position: relative;
 }
+
 
 /* Botão de Ação Premium */
 .btn-primary {
