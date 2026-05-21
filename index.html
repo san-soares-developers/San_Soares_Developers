@@ -6,83 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Soares Developers | Engenharia de Software & Soluções SaaS</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/sansoares.js"></script>
 </head>
+
 <body>
 
-    <!-- Navegação / Topo -->
     <nav>
         <div class="container nav-container">
-            <div class="logo-wrapper">
-                <!-- Se você tiver o arquivo logo.png dentro da pasta img, ele carrega aqui -->
-                <img src="./img/logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+            <div class="logo-container">
+                <div class="logo-icon-css">S</div>
                 <div class="logo-text">San Soares<span> Developers</span></div>
             </div>
         </div>
     </nav>
 
-
-    <!-- Banner Principal (Hero Section) -->
     <section class="hero-banner">
         <div class="container hero-content">
             <h1>Arquitetura de Softwares Resilientes e Engenharia de <span>Soluções SaaS</span></h1>
-            <p>Desenvolvemos ecossistemas backend estáveis, plataformas Multi-Tenant escaláveis e automações inteligentes em
-                nuvem prontas para operar sob alta demanda de mercado.</p>
+            <p>Desenvolvemos ecossistemas backend estáveis, plataformas distribuídas escaláveis e automações
+                inteligentes em nuvem de alto rendimento corporativo.</p>
             <button class="btn-primary">Falar com nossa Engenharia Comercial</button>
         </div>
     </section>
 
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Especialidades Técnicas</h2>
-            <div class="grid-features">
-                <div class="feature-card">
-                    <h3>🛡️ Privacy by Design & LGPD</h3>
-                    <p>Persistência relacional atômica com criptografia nativa de dados sensíveis na camada do banco de
-                        dados, assegurando compliance legal integral.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>⚡ Cache & Baixa Latência</h3>
-                    <p>Otimização de tráfego de rede através do gerenciamento de sessões em memória RAM utilizando Redis
-                        corporativo.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>⚙️ APIs & Microsserviços</h3>
-                    <p>Construção de APIs REST polimórficas estruturadas sob os conceitos estáveis do ecossistema Java e
-                        Spring Boot 3.</p>
-                </div>
+    <section class="container section">
+        <h2 class="section-title">Especialidades Avançadas de Engenharia</h2>
+        <div class="grid-features">
+            <div class="feature-card">
+                <h3>🛡️ Privacy by Design</h3>
+                <p>Criptografia atômica de dados biográficos diretamente na camada do banco de dados (JPA Crypto).</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Cache Distribuído</h3>
+                <p>Gerenciamento de sessões em memória RAM via Redis corporativo, reduzindo latência externa.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚙️ APIs Polimórficas</h3>
+                <p>Construção de rotas extensíveis orientadas a objetos sob o ecossistema Java e Spring Boot 3.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🐳 Docker & DevOps</h3>
+                <p>Orquestração e isolamento de contêineres e ambientes produtivos estáveis via Docker Compose.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Tuning SQL</h3>
+                <p>Otimização de consultas relacionais volumosas e gerência de concorrência ativa no PostgreSQL.</p>
+            </div>
+            <div class="feature-card">
+                <h3>☁️ Cloud Computing</h3>
+                <p>Arquitetura em nuvem com governança rigorosa de acessos baseada no princípio de privilégio mínimo.
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>🧪 Testes Automatizados</h3>
+                <p>Garantia de estabilidade lógica através de testes unitários de alta cobertura com JUnit 5 e Mockito.
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Esteiras n8n</h3>
+                <p>Orquestração e automação de fluxos integrados de forma assíncrona com canais de mensageria.</p>
             </div>
         </div>
     </section>
 
-    <section class="solutions">
+    <section class="solutions section section-grey">
         <div class="container">
-            <h2 class="section-title">Sistemas Disponíveis para Licenciamento</h2>
+            <h2 class="section-title">Soluções Ativas e Sistemas Licenciáveis</h2>
             <div class="grid-solutions">
+
                 <div class="sol-card">
                     <div class="sol-header">
-                        <h3>Plataforma de Gestão Distribuída Multi-Tenant</h3>
+                        <h3>1. Gestão Distribuída Multi-Tenant (SaaS)</h3>
                     </div>
                     <div class="sol-body">
                         <ul>
-                            <li>Core backend de alta disponibilidade baseado em Java 21 e Spring Boot.</li>
-                            <li>Autenticação unificada de usuários através do padrão Strategy Pattern.</li>
-                            <li>Isolamento de identidades e histórico de auditoria imutável no PostgreSQL.</li>
+                            <li>Autenticação de múltiplas personas via Strategy Pattern.</li>
+                            <li>Fallback seguro de segurança em memória com Redis.</li>
+                            <li>Isolamento e integridade transacional com Hibernate.</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="sol-card">
                     <div class="sol-header">
-                        <h3>Plataforma de Recrutamento & Automação</h3>
+                        <h3>2. Recrutamento e Automação Sindical</h3>
                     </div>
                     <div class="sol-body">
                         <ul>
-                            <li>Roteamento de fluxos transacionais assíncronos integrados ao barramento Redis.</li>
-                            <li>Esteira automatizada para faturamento e cobrança recorrente via PIX/Boleto.</li>
-                            <li>Segurança de licenças baseada no conceito de Tenant Cut-Off.</li>
+                            <li>Interface responsiva Mobile-First focada em usabilidade.</li>
+                            <li>Esteira de faturamento automatizada integrada via APIs.</li>
+                            <li>Bloqueio operacional baseado em Tenant Cut-Off.</li>
                         </ul>
                     </div>
                 </div>
+
+                <div class="sol-card">
+                    <div class="sol-header">
+                        <h3>3. E-Commerce de Alta Performance (Alimentício)</h3>
+                    </div>
+                    <div class="sol-body">
+                        <ul>
+                            <li>Integração nativa com barramentos e gateways de pagamento.</li>
+                            <li>Gerenciamento inteligente de estoque e pedidos síncronos.</li>
+                            <li>Arquitetura preparada para picos volumosos de acesso.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sol-card">
+                    <div class="sol-header">
+                        <h3>4. ERP Integrado para Varejo e Confecções</h3>
+                    </div>
+                    <div class="sol-body">
+                        <ul>
+                            <li>Controle centralizado de grades de produtos, cores e tamanhos.</li>
+                            <li>Relatórios e dashboards nativos de performance de vendas.</li>
+                            <li>Sincronização ágil entre canais físicos e digitais.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sol-card">
+                    <div class="sol-header">
+                        <h3>5. Motor de Integrações Avançadas de APIs</h3>
+                    </div>
+                    <div class="sol-body">
+                        <ul>
+                            <li>Centralização de contratos via OpenAPI 3 (Swagger).</li>
+                            <li>Sanitização automática contra falhas de tipagem na rede.</li>
+                            <li>Segurança stateless baseada em Tokens JWT.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sol-card">
+                    <div class="sol-header">
+                        <h3>6. Microserviços de Notificação Assíncrona</h3>
+                    </div>
+                    <div class="sol-body">
+                        <ul>
+                            <li>Disparo automático de fluxos conectado ao WhatsApp.</li>
+                            <li>Gerenciamento resiliente de filas de mensageria local.</li>
+                            <li>Isolamento de logs operacionais via CloudWatch.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container section">
+        <div class="contact-box">
+            <h2>Iniciar um Projeto Corporativo</h2>
+            <p>Solicite o licenciamento de nossos softwares ativos ou agende uma consultoria arquitetural de sistemas
+                backend.</p>
+            <div class="contact-info">
+                <p>✉️ Atendimento: <a href="mailto:alessandrobisposoares@gmail.com">alessandrobisposoares@gmail.com</a>
+                </p>
+                <p style="margin-top: 10px;">📱 WhatsApp: <a href="https://wa.me" target="_blank">(11) 93132-1975</a>
+                </p>
             </div>
         </div>
     </section>
@@ -90,8 +172,11 @@
     <footer>
         <div class="container footer-container">
             <div>© 2026 San Soares Developers. Todos os direitos reservados.</div>
-            <div>São Paulo - SP</div>
+            <div>Engenharia de Software de Alta Disponibilidade.</div>
         </div>
     </footer>
+
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
