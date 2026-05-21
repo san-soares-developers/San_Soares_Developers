@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro B. Soares | Software Engineer & SaaS Architect</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            border-bottom: 3px solid #0f172a;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #475569;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Seções */
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #334155;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Soluções SaaS */
+        .card {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            font-size: 14.5px;
+            color: #334155;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .card ul li::before {
+            content: "▪";
+            color: #3b82f6;
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        /* Badges de Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Contato */
+        .contato-list {
+            list-style: none;
+        }
+
+        .contato-list li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .contato-list a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contato-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>ALESSANDRO BISPO SOARES</h1>
+            <div class="subtitle">Arquitetura de Sistemas & Engenharia de Software SaaS</div>
+        </header>
+
+        <section>
+            <h2>[ Quem Sou ]</h2>
+            <p>Profissional de TI com formação em Ciência da Computação, pós-graduado em Cloud Computing e especialista
+                no ecossistema Java (Spring Boot 3). Meu foco de atuação é projetar e implementar arquiteturas de
+                software de alta resiliência, sistemas Multi-Tenant escaláveis e automações inteligentes em nuvem,
+                sempre sob a premissa de "Privacy by Design" (LGPD/ECA).</p>
+            <p>Alinho rigor técnico à visão consultiva de negócios, entregando soluções que otimizam custos de
+                infraestrutura e blindam completamente a segurança jurídica e operacional da empresa contratante.</p>
+        </section>
+
+        <section>
+            <h2>[ Produtos & Soluções SaaS em Portfólio ]</h2>
+
+            <div class="card">
+                <h3>1. Sistema de Gestão Distribuída Multi-Tenant (SaaS Tabacaria Reis)</h3>
+                <ul>
+                    <li><b>Arquitetura Backend:</b> Desenvolvido com robustez em Java 21 e Spring Boot 3.4.</li>
+                    <li><b>Controle de Acesso Polimórfico:</b> Autenticação flexível via Pattern Strategy e Spring
+                        Security, centralizando múltiplas personas no mesmo endpoint público.</li>
+                    <li><b>Performance em Escala:</b> Integração com Redis para gerenciamento de cache de sessão
+                        distribuída na memória RAM, mitigando a latência de rede.</li>
+                    <li><b>Compliance de Dados:</b> Criptografia de dados sensíveis na persistência (PostgreSQL) via
+                        AttributeConverter do JPA, isolando o histórico de consentimento com IP e User-Agent.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>2. Plataforma Corporativa de Recrutamento & Automação (SaaS Vagas Construção)</h3>
+                <ul>
+                    <li><b>Arquitetura Mobile-First:</b> Interface limpa e responsiva voltada para usabilidade imediata
+                        em smartphones.</li>
+                    <li><b>Integração Financeira:</b> Automatização ponta a ponta de esteira de cobrança recorrente via
+                        PIX e Boleto.</li>
+                    <li><b>Orquestração de Mensageria:</b> Fluxos de notificações assíncronas disparados nativamente
+                        para o WhatsApp através da integração entre n8n e Redis.</li>
+                    <li><b>Proteção de Licença:</b> Modelo baseado em Tenant Cut-Off (disjuntor automático de
+                        inadimplência), retornando Status 403 Forbidden para proteção de ativos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>[ Competências Técnicas (Hard Skills) ]</h2>
+            <div class="skills-grid">
+                <div class="badge">Java 21/17</div>
+                <div class="badge">Spring Boot 3.x</div>
+                <div class="badge">Spring Security</div>
+                <div class="badge">AWS Specialist (EC2, S3, IAM)</div>
+                <div class="badge">Docker / Docker Compose</div>
+                <div class="badge">PostgreSQL (Tuning)</div>
+                <div class="badge">Redis Memory Cache</div>
+                <div class="badge">n8n Automation</div>
+                <div class="badge">JUnit 5 / Mockito</div>
+                <div class="badge">Git / GitFlow</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>[ Contato & Contratação ]</h2>
+            <p>Disponível para posições corporativas de Engenharia Backend, projetos sob demanda e consultoria
+                arquitetural.</p>
+            <ul class="contato-list">
+                <li>✉️ E-mail: <a href="mailto:alessandrobisposoares@gmail.com">alessandrobisposoares@gmail.com</a></li>
+                <li>📱 WhatsApp: <a href="https://wa.me" target="_blank">(11) 93132-1975</a></li>
+                <li>🐙 GitHub: <a href="https://github.com" target="_blank">://github.com</a></li>
+                <li>💼 LinkedIn: <a href="https://linkedin.com" target="_blank">://linkedin.com</a></li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+
+</html>
