@@ -125,12 +125,25 @@ nav {
     margin: 0 auto;
 }
 
-.hero-banner h1 {
+/* .hero-banner h1 {
     font-size: 42px;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: -1px;
     margin-bottom: 24px;
+} */
+
+/* Ajuste de contraste para o Título Principal */
+.hero-banner h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #0f172a; /* Grafite bem escuro */
+    margin-bottom: 24px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-banner h1 span {
