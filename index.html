@@ -4,224 +4,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alessandro B. Soares | Software Engineer & SaaS Architect</title>
+    <title>San Soares Developers | Engenharia de Software & Soluções SaaS</title>
     <style>
+        /* Base e Reset */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
-            color: #1a1a1a;
+            color: #1e293b;
             line-height: 1.6;
-            padding: 40px 20px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 24px;
         }
 
-        /* Cabeçalho */
-        header {
-            border-bottom: 3px solid #0f172a;
-            padding-bottom: 20px;
-            margin-bottom: 35px;
+        /* Menu Superior */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        h1 {
-            font-size: 32px;
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
             color: #0f172a;
             letter-spacing: -0.5px;
-            font-weight: 800;
+            text-transform: uppercase;
         }
 
-        .subtitle {
+        .logo span {
+            color: #2563eb;
+        }
+
+        /* Abertura de Impacto (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 80px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
             font-size: 18px;
             color: #475569;
+            margin-bottom: 30px;
+        }
+
+        /* Botões */
+        .btn-primary {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 15px;
             font-weight: 600;
-            margin-top: 5px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
         }
 
-        /* Seções */
-        section {
-            margin-bottom: 35px;
+        .btn-primary:hover {
+            background-color: #1d4ed8;
         }
 
-        h2 {
-            font-size: 20px;
+        /* Pilares Técnicos */
+        .features {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 800;
             color: #0f172a;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 40px;
+            border-left: 4px solid #2563eb;
+            padding-left: 12px;
         }
 
-        p {
-            font-size: 16px;
-            color: #334155;
-            margin-bottom: 15px;
-            text-align: justify;
+        .grid-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
-        /* Soluções SaaS */
-        .card {
-            background: #f8fafc;
-            border-left: 4px solid #3b82f6;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 0 8px 8px 0;
+        .feature-card {
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #ffffff;
         }
 
-        .card h3 {
+        .feature-card h3 {
             font-size: 18px;
+            font-weight: 700;
             color: #0f172a;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        .card ul {
+        .feature-card p {
+            font-size: 14.5px;
+            color: #64748b;
+        }
+
+        /* Catálogo de Soluções SaaS */
+        .solutions {
+            padding: 60px 0;
+            background-color: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .grid-solutions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        @media(max-width: 600px) {
+            .grid-solutions {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sol-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sol-header {
+            background-color: #0f172a;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        .sol-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .sol-body {
+            padding: 24px;
+        }
+
+        .sol-body ul {
             list-style: none;
         }
 
-        .card ul li {
+        .sol-body ul li {
             font-size: 14.5px;
             color: #334155;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            padding-left: 18px;
             position: relative;
-            padding-left: 15px;
         }
 
-        .card ul li::before {
-            content: "▪";
-            color: #3b82f6;
+        .sol-body ul li::before {
+            content: "✓";
+            color: #10b981;
             position: absolute;
             left: 0;
-            top: -1px;
-        }
-
-        /* Badges de Skills */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .badge {
-            background: #f1f5f9;
-            color: #0f172a;
-            padding: 6px 12px;
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 4px;
-            border: 1px solid #e2e8f0;
-        }
-
-        /* Contato */
-        .contato-list {
-            list-style: none;
-        }
-
-        .contato-list li {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #0f172a;
-            font-weight: 600;
-        }
-
-        .contato-list a {
-            color: #2563eb;
-            text-decoration: none;
             font-weight: bold;
         }
 
-        .contato-list a:hover {
-            text-decoration: underline;
+        /* Rodapé */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 30px 0;
+            font-size: 13px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <header>
-            <h1>ALESSANDRO BISPO SOARES</h1>
-            <div class="subtitle">Arquitetura de Sistemas & Engenharia de Software SaaS</div>
-        </header>
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">San Soares<span> Developers</span></div>
+        </div>
+    </nav>
 
-        <section>
-            <h2>[ Quem Sou ]</h2>
-            <p>Profissional de TI com formação em Ciência da Computação, pós-graduado em Cloud Computing e especialista
-                no ecossistema Java (Spring Boot 3). Meu foco de atuação é projetar e implementar arquiteturas de
-                software de alta resiliência, sistemas Multi-Tenant escaláveis e automações inteligentes em nuvem,
-                sempre sob a premissa de "Privacy by Design" (LGPD/ECA).</p>
-            <p>Alinho rigor técnico à visão consultiva de negócios, entregando soluções que otimizam custos de
-                infraestrutura e blindam completamente a segurança jurídica e operacional da empresa contratante.</p>
-        </section>
+    <section class="hero">
+        <div class="container">
+            <h1>Arquitetura de Softwares Resilientes e Engenharia de <span>Soluções SaaS</span></h1>
+            <p>Desenvolvemos ecossistemas backend estáveis, plataformas Multi-Tenant escaláveis e automações
+                inteligentes em nuvem alinhadas aos objetivos de segurança do seu negócio.</p>
+            <button class="btn-primary" onclick="irParaWhatsApp()">Falar com nossa Engenharia Comercial</button>
+        </div>
+    </section>
 
-        <section>
-            <h2>[ Produtos & Soluções SaaS em Portfólio ]</h2>
-
-            <div class="card">
-                <h3>1. Sistema de Gestão Distribuída Multi-Tenant (SaaS Tabacaria Reis)</h3>
-                <ul>
-                    <li><b>Arquitetura Backend:</b> Desenvolvido com robustez em Java 21 e Spring Boot 3.4.</li>
-                    <li><b>Controle de Acesso Polimórfico:</b> Autenticação flexível via Pattern Strategy e Spring
-                        Security, centralizando múltiplas personas no mesmo endpoint público.</li>
-                    <li><b>Performance em Escala:</b> Integração com Redis para gerenciamento de cache de sessão
-                        distribuída na memória RAM, mitigando a latência de rede.</li>
-                    <li><b>Compliance de Dados:</b> Criptografia de dados sensíveis na persistência (PostgreSQL) via
-                        AttributeConverter do JPA, isolando o histórico de consentimento com IP e User-Agent.</li>
-                </ul>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Especialidades Técnicas</h2>
+            <div class="grid-features">
+                <div class="feature-card">
+                    <h3>🛡️ Privacy by Design & LGPD</h3>
+                    <p>Persistência relacional atômica com criptografia nativa de dados sensíveis na camada do banco de
+                        dados, assegurando compliance legal integral.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Cache & Baixa Latência</h3>
+                    <p>Otimização de tráfego de rede através do gerenciamento de sessões em memória RAM utilizando Redis
+                        corporativo.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚙️ APIs & Microsserviços</h3>
+                    <p>Construção de APIs REST polimórficas estruturadas sob os conceitos estáveis do ecossistema Java e
+                        Spring Boot 3.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3>2. Plataforma Corporativa de Recrutamento & Automação (SaaS Vagas Construção)</h3>
-                <ul>
-                    <li><b>Arquitetura Mobile-First:</b> Interface limpa e responsiva voltada para usabilidade imediata
-                        em smartphones.</li>
-                    <li><b>Integração Financeira:</b> Automatização ponta a ponta de esteira de cobrança recorrente via
-                        PIX e Boleto.</li>
-                    <li><b>Orquestração de Mensageria:</b> Fluxos de notificações assíncronas disparados nativamente
-                        para o WhatsApp através da integração entre n8n e Redis.</li>
-                    <li><b>Proteção de Licença:</b> Modelo baseado em Tenant Cut-Off (disjuntor automático de
-                        inadimplência), retornando Status 403 Forbidden para proteção de ativos.</li>
-                </ul>
+    <section class="solutions">
+        <div class="container">
+            <h2 class="section-title">Sistemas Disponíveis para Licenciamento</h2>
+            <div class="grid-solutions">
+                <div class="sol-card">
+                    <div class="sol-header">
+                        <h3>Plataforma de Gestão Distribuída Multi-Tenant</h3>
+                    </div>
+                    <div class="sol-body">
+                        <ul>
+                            <li>Core backend de alta disponibilidade baseado em Java 21 e Spring Boot.</li>
+                            <li>Autenticação unificada de usuários através do padrão Strategy Pattern.</li>
+                            <li>Isolamento de identidades e histórico de auditoria imutável no PostgreSQL.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sol-card">
+                    <div class="sol-header">
+                        <h3>Plataforma de Recrutamento & Automação</h3>
+                    </div>
+                    <div class="sol-body">
+                        <ul>
+                            <li>Roteamento de fluxos transacionais assíncronos integrados ao barramento Redis.</li>
+                            <li>Esteira automatizada para faturamento e cobrança recorrente via PIX/Boleto.</li>
+                            <li>Segurança de licenças baseada no conceito de Tenant Cut-Off.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h2>[ Competências Técnicas (Hard Skills) ]</h2>
-            <div class="skills-grid">
-                <div class="badge">Java 21/17</div>
-                <div class="badge">Spring Boot 3.x</div>
-                <div class="badge">Spring Security</div>
-                <div class="badge">AWS Specialist (EC2, S3, IAM)</div>
-                <div class="badge">Docker / Docker Compose</div>
-                <div class="badge">PostgreSQL (Tuning)</div>
-                <div class="badge">Redis Memory Cache</div>
-                <div class="badge">n8n Automation</div>
-                <div class="badge">JUnit 5 / Mockito</div>
-                <div class="badge">Git / GitFlow</div>
-            </div>
-        </section>
+    <footer>
+        <div class="container footer-container">
+            <div>© 2026 San Soares Developers. Todos os direitos reservados.</div>
+            <div>São Paulo - SP</div>
+        </div>
+    </footer>
 
-        <section>
-            <h2>[ Contato & Contratação ]</h2>
-            <p>Disponível para posições corporativas de Engenharia Backend, projetos sob demanda e consultoria
-                arquitetural.</p>
-            <ul class="contato-list">
-                <li>✉️ E-mail: <a href="mailto:alessandrobisposoares@gmail.com">alessandrobisposoares@gmail.com</a></li>
-                <li>📱 WhatsApp: <a href="https://wa.me" target="_blank">(11) 93132-1975</a></li>
-                <li>🐙 GitHub: <a href="https://github.com" target="_blank">://github.com</a></li>
-                <li>💼 LinkedIn: <a href="https://linkedin.com" target="_blank">://linkedin.com</a></li>
-            </ul>
-        </section>
-    </div>
+    <!-- JavaScript para o direcionamento seguro do WhatsApp -->
+    <script>
+        function irParaWhatsApp() {
+            var telefone = "5511931321975";
+            var mensagem = encodeURIComponent("Olá, gostaria de solicitar uma consultoria técnica sobre as soluções SaaS da San Soares Developers.");
+            window.open("https://wa.me" + telefone + "?text=" + mensagem, "_blank");
+        }
+    </script>
 
 </body>
 
