@@ -89,7 +89,7 @@ nav {
 }
 
 /* Banner de Fundo Avançado (Hero Section) */
-.hero-banner {
+/* .hero-banner {
     background-color: var(--dark-bg);
     background-image: 
         radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
@@ -101,7 +101,24 @@ nav {
     color: #ffffff;
     border-bottom: 4px solid var(--primary);
     text-align: center;
+} */
+
+
+/* 2. O Novo Banner com Fundo Premium de Alta Tecnologia (Leve e Claro) */
+.hero-banner {
+    /* Saem os tijolos escuros com texto e entra um degradê tecnológico suave e moderno */
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    background-image: 
+        radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(37, 99, 235, 0.04) 0%, transparent 40%);
+    
+    padding: 90px 0;
+    color: #0f172a; /* TEXTO ESCURO PARA LEITURA PERFEITA */
+    text-align: center;
+    border-bottom: 4px solid var(--primary);
+    position: relative;
 }
+
 
 .hero-content {
     max-width: 800px;
