@@ -1,8 +1,17 @@
+// Aguarda o navegador carregar a página por completo
+document.addEventListener("DOMContentLoaded", function () {
 
+    // Procura o botão no HTML pela classe dele
+    const botaoWhats = document.querySelector(".btn-primary");
 
-// JavaScript para o direcionamento seguro do WhatsApp
-function irParaWhatsApp() {
-    var telefone = "5511946666328";
-    var mensagem = encodeURIComponent("Olá, gostaria de solicitar uma consultoria técnica sobre as soluções SaaS da San Soares Developers.");
-    window.open("https://wa.me" + telefone + "?text=" + mensagem, "_blank");
-}
+    // Se o botão existir na tela, ativa o evento de clique
+    if (botaoWhats) {
+        botaoWhats.addEventListener("click", function () {
+            const numeroTelefone = "5511931321975";
+            const mensagemTexto = encodeURIComponent("Olá, gostaria de solicitar uma consultoria técnica sobre as soluções SaaS da San Soares Developers.");
+
+            // Abre o link oficial Click-to-Chat do WhatsApp em uma nova aba
+            window.open("https://wa.me/" + numeroTelefone + "?text=" + mensagemTexto, "_blank");
+        });
+    }
+});
