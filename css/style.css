@@ -195,7 +195,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);
-    padding: 1rem;
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
     /* Isso empurra o início do desfoque para baixo, sumindo com a linha do topo! */
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
@@ -206,6 +205,7 @@ nav {
     gap: 40px;
     width: 100%;
     display: grid;
+    padding: 1rem;
     margin-bottom: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
@@ -243,7 +243,6 @@ nav {
     flex-direction: column;
     justify-content: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);
-    padding: 1rem;
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
     /* Isso empurra o início do desfoque para baixo, sumindo com a linha do topo! */
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
@@ -253,6 +252,7 @@ nav {
 .grid-solutions {
     gap: 40px;
     width: 100%;
+    padding: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
