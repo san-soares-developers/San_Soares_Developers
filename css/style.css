@@ -356,7 +356,7 @@ footer {
 
     .logo-topo {
         height: 50px !important; /* Reduz a altura da logo para caber melhor no espaço reduzido */
-        top: -20px; /* Ajuste fino para alinhar perfeitamente com o texto */
+        top: -17px; /* Ajuste fino para alinhar perfeitamente com o texto */
     }
 
     .hero-banner h1 {
