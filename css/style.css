@@ -46,7 +46,7 @@ nav {
 .main-nav { 
     padding:  4px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
     /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
@@ -82,6 +82,7 @@ nav {
     width: 50%;
     font-size: 2rem;
     font-weight: 800;
+    text-align: right;
     letter-spacing: -0.5px;
     text-transform: uppercase;
     display: inline-block;
@@ -96,10 +97,6 @@ nav {
     /* 3. Deixa o preenchimento da fonte transparente para o degradê aparecer */
     -webkit-text-fill-color: transparent;
     color: transparent;
-}
-
-.logo-text span {
-    color: var(--primary);
 }
 
 /* Banner com Fundo Premium de Alta Tecnologia (Leve e Claro) */
