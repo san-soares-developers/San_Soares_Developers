@@ -6,88 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Soares Developers | Engenharia de Software & Soluções SaaS</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://rsms.me">
 </head>
 
 <body>
 
-    <nav>
-        <div class="container nav-container">
+    <nav class="container">
+        <div class="container main-nav">
             <div class="logo-container">
-                <!-- A imagem real da sua logo substitui o ícone de texto antigo -->
-                <img src="./img/logo.png" alt="Logo San Soares" class="logo-topo">
-                <div class="logo-text">San Soares<span> Developers</span></div>
+                <img src="./img/logo.png" alt="Logo San Soares Developers." class="logo-topo">
             </div>
+            <div class="logo-text">San Soares Developers</div>
         </div>
     </nav>
 
-
     <!-- Banner Principal (Hero Section) Reestruturado -->
-    <section class="hero-banner">
-        <div class="container hero-content">
-    
-            <!-- 1. Título Principal no Topo -->
-            <h1>Arquitetura de Softwares Resilientes e Engenharia de <span>Soluções SaaS</span></h1>
-    
-            <!-- 2. Container da Imagem Centralizada e Menor -->
-            <div class="banner-logo-wrapper">
-                <img src="./img/banner.jpg" alt="San Soares Logo" class="banner-logo-mid">
-            </div>
-    
-            <!-- 3. Subtítulos e Dizeres Técnicos -->
-            <p class="hero-description">Desenvolvemos ecossistemas backend estáveis, plataformas distribuídas escaláveis e
-                automações inteligentes em nuvem de alto rendimento corporativo.</p>
-            <p class="hero-tags">Web • Mobile • Desktop • Inovação no Brasil</p>
-    
-            <!-- 4. Botão de Ação na Base -->
-            <button class="btn-primary">Falar com nossa Engenharia Comercial</button>
-    
+    <section class="hero-banner">    
+        <div class="hero-buttom">
+            <!-- Botão de Ação na Base -->
+            <button class="btn-primary">Falar com nossa Engenharia Comercial</button>            
         </div>
     </section>
 
+    <section class="container hero-contains">
+        <!-- 1. Título Principal no Topo -->
+        <div class="hero-title">
+            <!-- Subtítulo Secundário e Dizeres Técnicos -->
+            <h1>Arquitetura de Softwares Resilientes e Engenharia de Soluções SaaS</h1>
+        </div>
+        <div class="container hero-contains">
+            <p>Transformando visões corporativas em realidade digital.</p>              
+            <p>Desenvolvemos ecossistemas backend estáveis, plataformas distribuídas escaláveis.</p>
+            <p>Automações inteligentes em nuvem de alto rendimento corporativo.</p>
+        </div>
+    </section>
 
     <section class="container section">
-        <h2 class="section-title">Especialidades Avançadas de Engenharia</h2>
-        <div class="grid-features">
-            <div class="feature-card">
-                <h3>🛡️ Privacy by Design</h3>
-                <p>Criptografia atômica de dados biográficos diretamente na camada do banco de dados (JPA Crypto).</p>
-            </div>
-            <div class="feature-card">
-                <h3>⚡ Cache Distribuído</h3>
-                <p>Gerenciamento de sessões em memória RAM via Redis corporativo, reduzindo latência externa.</p>
-            </div>
-            <div class="feature-card">
-                <h3>⚙️ APIs Polimórficas</h3>
-                <p>Construção de rotas extensíveis orientadas a objetos sob o ecossistema Java e Spring Boot 3.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🐳 Docker & DevOps</h3>
-                <p>Orquestração e isolamento de contêineres e ambientes produtivos estáveis via Docker Compose.</p>
-            </div>
-            <div class="feature-card">
-                <h3>📊 Tuning SQL</h3>
-                <p>Otimização de consultas relacionais volumosas e gerência de concorrência ativa no PostgreSQL.</p>
-            </div>
-            <div class="feature-card">
-                <h3>☁️ Cloud Computing</h3>
-                <p>Arquitetura em nuvem com governança rigorosa de acessos baseada no princípio de privilégio mínimo.
-                </p>
-            </div>
-            <div class="feature-card">
-                <h3>🧪 Testes Automatizados</h3>
-                <p>Garantia de estabilidade lógica através de testes unitários de alta cobertura com JUnit 5 e Mockito.
-                </p>
-            </div>
-            <div class="feature-card">
-                <h3>🔄 Esteiras n8n</h3>
-                <p>Orquestração e automação de fluxos integrados de forma assíncrona com canais de mensageria.</p>
+        <div class="section-header">
+            <h2 class="section-title">Especialidades Avançadas de Engenharia</h2>
+        </div>
+        <div class="features">
+            <div class="grid-features">
+                <div class="feature-card">
+                    <h3>🛡️ Privacy by Design</h3>
+                    <p>Criptografia atômica de dados biográficos diretamente na camada do banco de dados (JPA Crypto).</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Cache Distribuído</h3>
+                    <p>Gerenciamento de sessões em memória RAM via Redis corporativo, reduzindo latência externa.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚙️ APIs Polimórficas</h3>
+                    <p>Construção de rotas extensíveis orientadas a objetos sob o ecossistema Java e Spring Boot 3.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🐳 Docker & DevOps</h3>
+                    <p>Orquestração e isolamento de contêineres e ambientes produtivos estáveis via Docker Compose.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Tuning SQL</h3>
+                    <p>Otimização de consultas relacionais volumosas e gerência de concorrência ativa no PostgreSQL.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>☁️ Cloud Computing</h3>
+                    <p>Arquitetura em nuvem com governança rigorosa de acessos baseada no princípio de privilégio mínimo.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3>🧪 Testes Automatizados</h3>
+                    <p>Garantia de estabilidade lógica através de testes unitários de alta cobertura com JUnit 5 e Mockito.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 Esteiras n8n</h3>
+                    <p>Orquestração e automação de fluxos integrados de forma assíncrona com canais de mensageria.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="solutions section section-grey">
+    <section class="section section-grey">
         <div class="container">
-            <h2 class="section-title">Soluções Ativas e Sistemas Licenciáveis</h2>
+            <div class="section-header">
+                <h2 class="section-title">Soluções Ativas e Sistemas Licenciáveis</h2>
+        </div>
+        <div class="solutions">
             <div class="grid-solutions">
 
                 <div class="sol-card">
@@ -170,6 +173,7 @@
 
             </div>
         </div>
+        </div>
     </section>
 
     <section class="container section">
@@ -187,8 +191,8 @@
     </section>
 
     <footer>
-        <div class="container footer-container">
-            <div>© 2026 San Soares Developers. Todos os direitos reservados.</div>
+        <div class="container footer-contains">
+            <div>© 2021 San Soares Developers. Todos os direitos reservados.</div>
             <div>Engenharia de Software de Alta Disponibilidade.</div>
         </div>
     </footer>
