@@ -349,6 +349,8 @@ footer {
     .logo-text {
         font-size: 1.25rem !important; /* Reduz o tamanho do texto para caber melhor em telas menores */
         text-align: center !important; /* Centraliza o texto para melhor alinhamento em telas pequenas */
+        align-items: center !important; /* Centraliza verticalmente o texto */
+        justify-content: center !important; /* Centraliza horizontalmente o texto */
     }
 
     .logo-container {
