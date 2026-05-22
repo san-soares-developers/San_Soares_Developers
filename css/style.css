@@ -204,6 +204,7 @@ nav {
 /* Grid de 8 Cards com Efeito de Flutuação */
 .grid-features {
     gap: 40px;
+    width: 100%;
     display: grid;
     margin-bottom: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -251,6 +252,7 @@ nav {
 /* Grid de 6 Produtos Disponíveis */
 .grid-solutions {
     gap: 40px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
