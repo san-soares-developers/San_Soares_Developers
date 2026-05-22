@@ -347,7 +347,7 @@ footer {
 @media (max-width: 768px) {
 
     .logo-text {
-        font-size: 0.7rem !important; /* Reduz o tamanho do texto para caber melhor em telas menores */
+        font-size: 0.9rem !important; /* Reduz o tamanho do texto para caber melhor em telas menores */
     }
 
     .hero-banner h1 {
