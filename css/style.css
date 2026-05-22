@@ -420,8 +420,8 @@ footer {
     .menu-hamburger {      border: 2px solid #ff0000;
         margin: 0;
         padding: 0;
-        width: 30px;
         z-index: 110;
+        width: 22px;
         height: 22px;
         border: none;
         display: flex;
@@ -431,40 +431,17 @@ footer {
         padding-left: 3rem;
         align-items: center;
         color: var(--dark-bg);
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    /* Desenha os riscos grossos e simétricos do menu */
-    .linha-hamburger {
-        width: 100% !important;
-        height: 4px !important; /* Grossura dos riscos conforme seu print anterior */
-        background-color: #0f172a !important; /* Cor padrão escura */
-        border-radius: 2px !important;
-        transition: all 0.3s ease !important; /* Efeito suave de transformação */
-    }
-
-    /* ==========================================
-       A MÁGICA DO X VERMELHO (EFEITO ATIVO)
-       ========================================== */
-    
-    /* Gira a linha de cima para baixo */
-    .menu-hamburger.active .linha-hamburger:nth-child(1) {
-        transform: translateY(9px) rotate(45deg) !important;
-        background-color: #ef4444 !important; /* Vermelho vibrante de fechamento */
-    }
-
-    /* Some com a linha do meio */
-    .menu-hamburger.active .linha-hamburger:nth-child(2) {
-        opacity: 0 !important;
-    }
-
-    /* Gira a linha de baixo para cima */
-    .menu-hamburger.active .linha-hamburger:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg) !important;
-        background-color: #ef4444 !important;
+        justify-content: center;
+        transform: translateY(-7%);
     }
     
+    .barras-icon {
+        font-size: 32px;
+        font-weight: 900;
+        color: #0f172a;
+        line-height: 1;
+    }
+
     .nav-links {         border: 2px solid #ff0000;
         gap: 15px;
         padding: 20px;
