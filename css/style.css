@@ -157,7 +157,7 @@ nav {
 
 .hero-contains{ 
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     align-items: center;
     justify-content: center;
@@ -341,5 +341,22 @@ footer {
 
 }
 
+
+
+/* Regras específicas de responsividade para Smartphone */
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 28px !important; /* Reduz o título para caber na tela do celular */
+    }
+    .grid-features {
+        grid-template-columns: 1fr !important; /* Força os cards flutuantes a ficarem um embaixo do outro */
+    }
+    .grid-solutions {
+        grid-template-columns: 1fr !important; /* Força as caixas de sistemas a empilharem verticalmente */
+    }
+    .banner-logo-mid {
+        max-width: 260px !important; /* Diminui o tamanho do S centralizado para não vazar nas laterais */
+    }
+}
 
 
