@@ -187,6 +187,17 @@ nav {
     flex-direction: column;
 } 
 
+.hero-description {
+    width: 60%;
+    height: 120px;
+    display: flex;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+}   
+
 /* Seções Principais */
 .section {
     padding: 60px 0;
