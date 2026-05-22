@@ -345,6 +345,11 @@ footer {
 
 /* Regras específicas de responsividade para Smartphone */
 @media (max-width: 768px) {
+
+    .logo-text {
+        font-size: 0.9rem !important; /* Reduz o tamanho do texto para caber melhor em telas menores */
+    }
+
     .hero-banner h1 {
         font-size: 28px !important; /* Reduz o título para caber na tela do celular */
     }
