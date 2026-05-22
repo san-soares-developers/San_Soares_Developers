@@ -420,7 +420,9 @@ footer {
     .menu-hamburger {      border: 2px solid #ff0000;
         margin: 0;
         padding: 0;
-        height: 100%;
+        width: 30px;
+        z-index: 110;
+        height: 22px;
         border: none;
         display: flex;
         cursor: pointer;
@@ -429,17 +431,10 @@ footer {
         padding-left: 3rem;
         align-items: center;
         color: var(--dark-bg);
-        justify-content: center;
-        transform: translateY(-7%);
+        justify-content: space-between;
+        flex-direction: column;
     }
     
-    .barras-icon {
-        font-size: 32px;
-        font-weight: 900;
-        color: #0f172a;
-        line-height: 1;
-    }
-
     .nav-links {         border: 2px solid #ff0000;
         gap: 15px;
         padding: 20px;
@@ -454,8 +449,8 @@ footer {
 
     /* Classe dinâmica que o JavaScript vai injetar ao clicar */
     .nav-links.active {
-        display: flex; /* Faz o menu descer na tela */
         margin: 0;
+        display: flex; /* Faz o menu descer na tela */
         width: 100%;
         padding: 10px 0;
         border-bottom: 1px solid var(--border-color);

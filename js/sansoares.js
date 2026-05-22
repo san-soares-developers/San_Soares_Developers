@@ -32,11 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
         linksWhats.forEach(function (link) {
             link.addEventListener("click", function (evento) {
                 evento.preventDefault(); // Impede a página de pular para o topo
-                const numeroTelefone = "5511931321975";
+                const numeroTelefone = "5511946666328";
+                // const numeroTelefone = "+5511931321975";
                 const mensagemTexto = encodeURIComponent("Olá, gostaria de solicitar uma consultoria técnica sobre as soluções SaaS da San Soares Developers.");
                 window.open("https://wa.me" + numeroTelefone + "?text=" + mensagemTexto, "_blank");
             });
         });
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const botaoHamburger = document.getElementById("btn-hamburger");
+        const menuGaveta = document.getElementById("menu-links");
+
+        if (botaoHamburger && menuGaveta) {
+            botaoHamburger.addEventListener("click", function () {
+                // Dispara o efeito visual do X Vermelho no botão
+                botaoHamburger.classList.toggle("active");
+
+                // Dispara a abertura e fechamento da gaveta de links
+                menuGaveta.classList.toggle("active");
+            });
+        }
+    });
+    
     
 });
