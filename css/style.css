@@ -354,6 +354,10 @@ footer {
         height: 40px !important; /* Diminui a altura do container para evitar que a logo vaze */
     }
 
+    .logo-topo {
+        height: 30px !important; /* Reduz a altura da logo para caber melhor no espaço reduzido */
+    }
+
     .hero-banner h1 {
         font-size: 28px !important; /* Reduz o título para caber na tela do celular */
     }
