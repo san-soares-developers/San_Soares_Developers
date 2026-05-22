@@ -350,6 +350,10 @@ footer {
         font-size: 1.25rem !important; /* Reduz o tamanho do texto para caber melhor em telas menores */
     }
 
+    .logo-container {
+        height: 40px !important; /* Diminui a altura do container para evitar que a logo vaze */
+    }
+
     .hero-banner h1 {
         font-size: 28px !important; /* Reduz o título para caber na tela do celular */
     }
