@@ -11,14 +11,33 @@
 
 <body>
 
-    <nav class="container">
-        <div class="container main-nav">
+    <!-- Navegação Responsiva Ajustada Conforme o Print -->
+    <nav>
+        <div class="main-nav">
+    
+            <!-- 1. Botão Hambúrguer com classe específica para engrossar os traços -->
+            <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu">
+                <span class="barras-icon">☰</span>
+            </button>
+    
+            <!-- 2. Logo Container contendo APENAS a Imagem e o Quadrado Verde -->
             <div class="logo-container">
-                <img src="./img/logo.png" alt="Logo San Soares Developers." class="logo-topo">
+                <!-- <img src="./img/logo.png" alt="Logo San Soares Developers." class="logo-topo"> -->
             </div>
+    
+            <!-- 3. Título da Empresa isolado para o CSS alinhar na direita/meio conforme o print -->
             <div class="logo-text">San Soares Developers</div>
+    
+            <!-- 4. Links do Menu Suspenso -->
+            <div class="nav-links" id="menu-links">
+                <a href="#" class="link-whats">Serviços</a>
+                <a href="#" class="link-whats">SaaS</a>
+                <a href="#" class="link-whats">Contato</a>
+            </div>
+    
         </div>
     </nav>
+
 
     <!-- Banner Principal (Hero Section) Reestruturado -->
     <section class="hero-banner">    

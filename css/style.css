@@ -60,6 +60,10 @@ nav {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
+.menu-hamburger {
+    display: none;
+}
+
 .logo-container {
     gap: 12px;
     height: 85px;
@@ -113,6 +117,7 @@ nav {
     background-size: cover;       /* Força a imagem a preencher todo o banner */
     background-position: center;   /* Mantém o "S" rigorosamente centralizado */
     background-repeat: no-repeat;  /* Impede a imagem de duplicar em telas grandes */
+    
     border-bottom: 7px solid var(--primary);
 }
 
@@ -346,21 +351,76 @@ footer {
 /* Regras específicas de responsividade para Smartphone */
 @media (max-width: 768px) {
 
+    .container {        border: 2px solid var(--primary);
+        /* padding: 0.5rem 0;  */
+        /* height: 10px; */
+    }
+
+    .main-nav {    
+        width: 100%;
+        display: flex;
+        padding: 0 0.5rem;
+        align-items: center;
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
+
+    .logo-container {       border: 2px solid #ff0000; 
+        width: 10%; 
+        left: 10px; 
+        height: 50px;
+        transform: translateY(-30%);
+        background-size: cover;       
+        background-position: center;   
+        background-repeat: no-repeat;  
+        background-image: url('../img/logo.png'); 
+    }
+    
     .logo-text { border: 2px solid var(--primary); /* Adiciona uma borda sutil para destacar o texto em telas menores */
-        font-size: 1.25rem !important; /* Reduz o tamanho do texto para caber melhor em telas menores */
-        text-align: center !important; /* Centraliza o texto para melhor alinhamento em telas pequenas */
-        align-items: center !important; /* Centraliza verticalmente o texto */
-        justify-content: center !important; /* Centraliza horizontalmente o texto */
+        top: -10%; 
+        font-size: 1.25rem; 
+        text-align: center; 
+        transform: translateY(-30%);
+        justify-content: flex-start;
+    }
+    
+    /* CSS interno da Media Query (Abaixo de 768px) */
+    .menu-hamburger {      border: 2px solid #ff0000;
+        border: none;
+        display: block;
+        cursor: pointer;
+        font-size: 33px;
+        background: none;
+        padding-left: 1rem;;
+        color: var(--dark-bg);
+        transform: translateY(-30%);
     }
 
-    .logo-container {
-        height: 40px !important; /* Diminui a altura do container para evitar que a logo vaze */
+    .nav-links {         border: 2px solid #ff0000;
+        display: none; /* Esconde os links de fábrica no celular */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background-color: #ffffff;
+        border-bottom: 2px solid var(--primary);
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
     }
 
-    .logo-topo {
-        height: 50px !important; /* Reduz a altura da logo para caber melhor no espaço reduzido */
-        top: -17px; /* Ajuste fino para alinhar perfeitamente com o texto */
+    /* Classe dinâmica que o JavaScript vai injetar ao clicar */
+    .nav-links.active {
+        display: flex !important; /* Faz o menu descer na tela */
     }
+
+    .nav-links a {
+        margin: 0 !important;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-color);
+        width: 100%;
+    }
+
+
 
     .hero-banner h1 {
         font-size: 28px !important; /* Reduz o título para caber na tela do celular */
@@ -374,6 +434,7 @@ footer {
     .banner-logo-mid {
         max-width: 260px !important; /* Diminui o tamanho do S centralizado para não vazar nas laterais */
     }
+
 }
 
 
