@@ -46,7 +46,7 @@ nav {
 .main-nav { 
     padding:  4px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     
     /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
