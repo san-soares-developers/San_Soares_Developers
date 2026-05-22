@@ -71,7 +71,7 @@ nav {
 /* Força a logo do topo a ficar quadrada e recortada de forma nítida */
 .logo-topo {
     width: auto;
-    height: 85px;
+    height: 75px;
     object-fit: contain;
     top: -12px; /* Ajuste fino para alinhar perfeitamente com o texto */
     position: absolute;
@@ -80,7 +80,7 @@ nav {
 
 .logo-text {
     width: 50%;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.5px;
     text-transform: uppercase;
