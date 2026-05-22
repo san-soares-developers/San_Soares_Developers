@@ -376,7 +376,7 @@ footer {
         background-image: url('../img/logo.png'); 
     }
     
-    .logo-text { border: 2px solid var(--primary); /* Adiciona uma borda sutil para destacar o texto em telas menores */
+    .logo-text {
         top: -10%; 
         font-size: 1.25rem; 
         text-align: center; 
