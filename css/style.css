@@ -373,8 +373,6 @@ footer {
     gap: 5rem; /* Espaçamento entre os itens */
 }
 
-
-
 /* Regras específicas de responsividade para Smartphone */
 @media (max-width: 768px) {
 
@@ -522,7 +520,7 @@ footer {
     }
 
     .grid-solutions {
-        gap: 15px;
+        gap: 20px;
         padding: 0.5rem;
     }
 
@@ -542,4 +540,9 @@ footer {
     }
 }
 
+
+/* Regras específicas de responsividade para Smartphone */
+@media (max-width: 600px) {
+
+}
 
