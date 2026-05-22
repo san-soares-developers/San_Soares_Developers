@@ -426,22 +426,20 @@ footer {
         border: none;
         display: flex;
         cursor: pointer;
-        font-size: 33px;
         background: none;
-        padding-left: 3rem;
         align-items: center;
         color: var(--dark-bg);
-        justify-content: space-between;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     /* Desenha os riscos grossos e simétricos do menu */
     .linha-hamburger {
-        width: 100% !important;
-        height: 4px !important; /* Grossura dos riscos conforme seu print anterior */
-        background-color: #0f172a !important; /* Cor padrão escura */
-        border-radius: 2px !important;
-        transition: all 0.3s ease !important; /* Efeito suave de transformação */
+        width: 100%;
+        height: 4px ;
+        background-color: #0f172a;
+        border-radius: 2px;
+        transition: all 0.3s ease;
     }
 
     /* ==========================================
