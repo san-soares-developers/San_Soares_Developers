@@ -1,5 +1,8 @@
 /* Reset e Variáveis Globais */
 * {
+
+    
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -17,6 +20,12 @@
     --shadow-float: 0 15px 30px -5px rgba(0, 0, 0, 0.04), 0 10px 15px -5px rgba(0, 0, 0, 0.02);
 }
 
+html, body {
+    width: 100%;
+    /* O disjuntor de segurança: corta e esconde qualquer coisa que tente vazar para as laterais */
+    overflow-x: hidden; 
+}
+
 body {
     background-color: #ffffff;
     color: var(--text-main);
@@ -26,13 +35,15 @@ body {
 
 /* Aplica o respiro e distanciamento sênior entre o menu e o banner */
 nav {
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    padding: 25px 0;
-    position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; 
+    position: sticky;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid var(--border-color);
+    /*
+    padding: 25px 0;
+    */
     
     /* Afasta todo o conteúdo de baixo, criando a distância desejada */
     margin-bottom: 60px; 
@@ -44,29 +55,37 @@ nav {
 }
 
 .main-nav { 
-    padding:  4px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+    padding: 25px 0;
+    align-items: center;    
     /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.12);
-    
+    justify-content: space-around;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.12);    
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
     /* Isso empurra o início do desfoque para baixo, sumindo com a linha do topo! */
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
+/* nav {
+    top: 0;
+    z-index: 100;
+    position: sticky;
+    border-top: none;
+    border-left: none;
+    border-right: none; */
+    /* Afasta todo o conteúdo de baixo, criando a distância desejada */
+    /* margin-bottom: 40px; 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.9);
+} */
+
+
 .menu-hamburger {
     display: none;
 }
 
-.logo-container {
-    gap: 12px;
-    height: 85px;
+.logo-containe {
     display: flex;
     position: relative;
     align-items: center;
@@ -84,7 +103,7 @@ nav {
 
 .logo-text {
     width: 50%;
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: 800;
     text-align: right;
     letter-spacing: -0.5px;
@@ -112,13 +131,12 @@ nav {
     align-items: center;
     justify-content: end;
     flex-direction: column;
-    background-image: url('../img/banner.jpg');    
     /* Propriedades para travar a imagem sem distorcer em nenhuma tela */
     background-size: cover;       /* Força a imagem a preencher todo o banner */
     background-position: center;   /* Mantém o "S" rigorosamente centralizado */
     background-repeat: no-repeat;  /* Impede a imagem de duplicar em telas grandes */
-    
     border-bottom: 7px solid var(--primary);
+    background-image: url('../img/banner.jpg');    
 }
 
 .hero-title{
@@ -343,7 +361,6 @@ footer {
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
     gap: 5rem; /* Espaçamento entre os itens */
-
 }
 
 
@@ -351,25 +368,34 @@ footer {
 /* Regras específicas de responsividade para Smartphone */
 @media (max-width: 768px) {
 
-    .container {        border: 2px solid var(--primary);
-        /* padding: 0.5rem 0;  */
-        /* height: 10px; */
+    body {
+        font-size: 0.95rem;
+        margin: 0 auto;
     }
 
-    .main-nav {    
+    /* Aplica o respiro e distanciamento sênior entre o menu e o banner */
+    nav {
+        display: flex;
+        align-items: center;
+        /* Afasta todo o conteúdo de baixo, criando a distância desejada */
+        margin-bottom: 10px; 
+    }
+    
+    .main-nav { 
+        gap: 1rem;
         width: 100%;
         display: flex;
-        padding: 0 0.5rem;
+        padding: 0.5rem 0;
         align-items: center;
         flex-direction: row; 
-        justify-content: space-between; 
+        justify-content: space-between; /* Garante que o logo fique à esquerda e o hambúrguer à direita */
     }
-
-    .logo-container {       border: 2px solid #ff0000; 
-        width: 10%; 
+    
+    .logo-container {
+        width: 8%; 
         left: 10px; 
-        height: 50px;
-        transform: translateY(-30%);
+        height: 60px;
+        transform: translateY(-1%);
         background-size: cover;       
         background-position: center;   
         background-repeat: no-repeat;  
@@ -377,64 +403,133 @@ footer {
     }
     
     .logo-text {
-        top: -10%; 
         font-size: 1.25rem; 
         text-align: center; 
-        transform: translateY(-30%);
         justify-content: flex-start;
     }
     
     /* CSS interno da Media Query (Abaixo de 768px) */
     .menu-hamburger {      border: 2px solid #ff0000;
+        margin: 0;
+        padding: 0;
+        height: 100%;
         border: none;
-        display: block;
+        display: flex;
         cursor: pointer;
         font-size: 33px;
         background: none;
-        padding-left: 1rem;;
+        padding-left: 3rem;
+        align-items: center;
         color: var(--dark-bg);
-        transform: translateY(-30%);
+        justify-content: center;
+        transform: translateY(-7%);
+    }
+    
+    .barras-icon {
+        font-size: 32px;
+        font-weight: 900;
+        color: #0f172a;
+        line-height: 1;
     }
 
     .nav-links {         border: 2px solid #ff0000;
-        display: none; /* Esconde os links de fábrica no celular */
-        flex-direction: column;
-        position: absolute;
-        top: 70px; left: 0; right: 0;
-        background-color: #ffffff;
-        border-bottom: 2px solid var(--primary);
-        padding: 20px;
         gap: 15px;
+        padding: 20px;
+        display: none; /* Esconde os links de fábrica no celular */
+        position: absolute;
+        flex-direction: column;
+        background-color: #ffffff;
+        top: 70px; left: 0; right: 0;
+        border-bottom: 2px solid var(--primary);
         box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
     }
 
     /* Classe dinâmica que o JavaScript vai injetar ao clicar */
     .nav-links.active {
-        display: flex !important; /* Faz o menu descer na tela */
-    }
-
-    .nav-links a {
-        margin: 0 !important;
+        display: flex; /* Faz o menu descer na tela */
+        margin: 0;
+        width: 100%;
         padding: 10px 0;
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-banner { 
+        height: 28vh;
         width: 100%;
+        position: relative;
+        border-bottom: 3px solid var(--primary);
+    }
+    
+    .hero-contains {
+        gap: 10px;
+        padding: 0.5rem;
     }
 
-
-
-    .hero-banner h1 {
-        font-size: 28px !important; /* Reduz o título para caber na tela do celular */
+    .hero-buttom {
+        top: 100%;
+        width: 50%;
+        right: -30%;
+        position: absolute;
+        transform: translate(-50%, 135%);
+        
     }
+
+    .btn-primary {
+        width: 60%;
+        font-size: 0.9rem;
+        padding: 12px 25px;
+    }
+    
+    .hero-title {
+        font-size: 0.77rem;
+    }
+    
+    .hero-description { 
+        left: 0;
+        width: 60%;
+        height: 90px;
+        display: flex;
+        padding: 0 0.7rem;
+        font-size: 0.8rem;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+        transform: translateX(-31%);
+    }
+    
+    .section {
+        padding: 1.5rem 0;
+    }
+
     .grid-features {
-        grid-template-columns: 1fr !important; /* Força os cards flutuantes a ficarem um embaixo do outro */
-    }
-    .grid-solutions {
-        grid-template-columns: 1fr !important; /* Força as caixas de sistemas a empilharem verticalmente */
-    }
-    .banner-logo-mid {
-        max-width: 260px !important; /* Diminui o tamanho do S centralizado para não vazar nas laterais */
+        gap: 15px;
+        margin-bottom: 0.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
+    .feature-card {
+        padding: 15px;
+    }
+
+    .grid-solutions {
+        gap: 15px;
+        padding: 0.5rem;
+    }
+
+    .contact-box {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .contact-box p {
+        font-size: 0.9rem;
+    }
+
+     .footer-contains {
+        gap: 0.3rem;
+        font-size: 0.9rem;        
+        flex-direction: column;
+    }
 }
 
 

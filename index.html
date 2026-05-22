@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +7,26 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://rsms.me">
 </head>
-
 <body>
-
     <!-- Navegação Responsiva Ajustada Conforme o Print -->
     <nav>
-        <div class="main-nav">
-    
+        <div class="main-nav">    
             <!-- 1. Botão Hambúrguer com classe específica para engrossar os traços -->
             <button class="menu-hamburger" id="btn-hamburger" aria-label="Abrir menu">
                 <span class="barras-icon">☰</span>
-            </button>
-    
+            </button>    
             <!-- 2. Logo Container contendo APENAS a Imagem e o Quadrado Verde -->
-            <div class="logo-container">
-                <!-- <img src="./img/logo.png" alt="Logo San Soares Developers." class="logo-topo"> -->
-            </div>
-    
+            <div class="logo-container"></div>    
             <!-- 3. Título da Empresa isolado para o CSS alinhar na direita/meio conforme o print -->
-            <div class="logo-text">San Soares Developers</div>
-    
+            <div class="logo-text">San Soares Developers</div>    
             <!-- 4. Links do Menu Suspenso -->
             <div class="nav-links" id="menu-links">
                 <a href="#" class="link-whats">Serviços</a>
                 <a href="#" class="link-whats">SaaS</a>
                 <a href="#" class="link-whats">Contato</a>
-            </div>
-    
+            </div>    
         </div>
     </nav>
-
-
     <!-- Banner Principal (Hero Section) Reestruturado -->
     <section class="hero-banner">    
         <div class="hero-buttom">
@@ -46,20 +34,18 @@
             <button class="btn-primary">Falar com nossa Engenharia Comercial</button>            
         </div>
     </section>
-
     <section class="container hero-contains">
         <!-- 1. Título Principal no Topo -->
         <div class="hero-title">
             <!-- Subtítulo Secundário e Dizeres Técnicos -->
             <h1>Arquitetura de Softwares Resilientes e Engenharia de Soluções SaaS</h1>
         </div>
-        <div class="container hero-contains">
+        <div class="container hero-description">
             <p>Transformando visões corporativas em realidade digital.</p>              
-            <p>Desenvolvemos ecossistemas backend estáveis, plataformas distribuídas escaláveis.</p>
             <p>Automações inteligentes em nuvem de alto rendimento corporativo.</p>
+            <p>Desenvolvemos ecossistemas backend estáveis, plataformas distribuídas escaláveis.</p>
         </div>
     </section>
-
     <section class="container section">
         <div class="section-header">
             <h2 class="section-title">Especialidades Avançadas de Engenharia</h2>
@@ -103,98 +89,95 @@
             </div>
         </div>
     </section>
-
     <section class="section section-grey">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Soluções Ativas e Sistemas Licenciáveis</h2>
-        </div>
-        <div class="solutions">
-            <div class="grid-solutions">
+            </div>
+            <div class="solutions">
+                <div class="grid-solutions">
+                    <div class="sol-card">
+                        <div class="sol-header">
+                            <h3>1. Gestão Distribuída Multi-Tenant (SaaS)</h3>
+                        </div>
+                        <div class="sol-body">
+                            <ul>
+                                <li>Autenticação de múltiplas personas via Strategy Pattern.</li>
+                                <li>Fallback seguro de segurança em memória com Redis.</li>
+                                <li>Isolamento e integridade transacional com Hibernate.</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <div class="sol-card">
-                    <div class="sol-header">
-                        <h3>1. Gestão Distribuída Multi-Tenant (SaaS)</h3>
+                    <div class="sol-card">
+                        <div class="sol-header">
+                            <h3>2. Recrutamento e Automação Sindical</h3>
+                        </div>
+                        <div class="sol-body">
+                            <ul>
+                                <li>Interface responsiva Mobile-First focada em usabilidade.</li>
+                                <li>Esteira de faturamento automatizada integrada via APIs.</li>
+                                <li>Bloqueio operacional baseado em Tenant Cut-Off.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="sol-body">
-                        <ul>
-                            <li>Autenticação de múltiplas personas via Strategy Pattern.</li>
-                            <li>Fallback seguro de segurança em memória com Redis.</li>
-                            <li>Isolamento e integridade transacional com Hibernate.</li>
-                        </ul>
+
+                    <div class="sol-card">
+                        <div class="sol-header">
+                            <h3>3. E-Commerce de Alta Performance (Alimentício)</h3>
+                        </div>
+                        <div class="sol-body">
+                            <ul>
+                                <li>Integração nativa com barramentos e gateways de pagamento.</li>
+                                <li>Gerenciamento inteligente de estoque e pedidos síncronos.</li>
+                                <li>Arquitetura preparada para picos volumosos de acesso.</li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="sol-card">
+                        <div class="sol-header">
+                            <h3>4. ERP Integrado para Varejo e Confecções</h3>
+                        </div>
+                        <div class="sol-body">
+                            <ul>
+                                <li>Controle centralizado de grades de produtos, cores e tamanhos.</li>
+                                <li>Relatórios e dashboards nativos de performance de vendas.</li>
+                                <li>Sincronização ágil entre canais físicos e digitais.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sol-card">
+                        <div class="sol-header">
+                            <h3>5. Motor de Integrações Avançadas de APIs</h3>
+                        </div>
+                        <div class="sol-body">
+                            <ul>
+                                <li>Centralização de contratos via OpenAPI 3 (Swagger).</li>
+                                <li>Sanitização automática contra falhas de tipagem na rede.</li>
+                                <li>Segurança stateless baseada em Tokens JWT.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sol-card">
+                        <div class="sol-header">
+                            <h3>6. Microserviços de Notificação Assíncrona</h3>
+                        </div>
+                        <div class="sol-body">
+                            <ul>
+                                <li>Disparo automático de fluxos conectado ao WhatsApp.</li>
+                                <li>Gerenciamento resiliente de filas de mensageria local.</li>
+                                <li>Isolamento de logs operacionais via CloudWatch.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="sol-card">
-                    <div class="sol-header">
-                        <h3>2. Recrutamento e Automação Sindical</h3>
-                    </div>
-                    <div class="sol-body">
-                        <ul>
-                            <li>Interface responsiva Mobile-First focada em usabilidade.</li>
-                            <li>Esteira de faturamento automatizada integrada via APIs.</li>
-                            <li>Bloqueio operacional baseado em Tenant Cut-Off.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sol-card">
-                    <div class="sol-header">
-                        <h3>3. E-Commerce de Alta Performance (Alimentício)</h3>
-                    </div>
-                    <div class="sol-body">
-                        <ul>
-                            <li>Integração nativa com barramentos e gateways de pagamento.</li>
-                            <li>Gerenciamento inteligente de estoque e pedidos síncronos.</li>
-                            <li>Arquitetura preparada para picos volumosos de acesso.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sol-card">
-                    <div class="sol-header">
-                        <h3>4. ERP Integrado para Varejo e Confecções</h3>
-                    </div>
-                    <div class="sol-body">
-                        <ul>
-                            <li>Controle centralizado de grades de produtos, cores e tamanhos.</li>
-                            <li>Relatórios e dashboards nativos de performance de vendas.</li>
-                            <li>Sincronização ágil entre canais físicos e digitais.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sol-card">
-                    <div class="sol-header">
-                        <h3>5. Motor de Integrações Avançadas de APIs</h3>
-                    </div>
-                    <div class="sol-body">
-                        <ul>
-                            <li>Centralização de contratos via OpenAPI 3 (Swagger).</li>
-                            <li>Sanitização automática contra falhas de tipagem na rede.</li>
-                            <li>Segurança stateless baseada em Tokens JWT.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sol-card">
-                    <div class="sol-header">
-                        <h3>6. Microserviços de Notificação Assíncrona</h3>
-                    </div>
-                    <div class="sol-body">
-                        <ul>
-                            <li>Disparo automático de fluxos conectado ao WhatsApp.</li>
-                            <li>Gerenciamento resiliente de filas de mensageria local.</li>
-                            <li>Isolamento de logs operacionais via CloudWatch.</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
-        </div>
     </section>
-
     <section class="container section">
         <div class="contact-box">
             <h2>Iniciar um Projeto Corporativo</h2>
@@ -208,15 +191,12 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container footer-contains">
             <div>© 2021 San Soares Developers. Todos os direitos reservados.</div>
             <div>Engenharia de Software de Alta Disponibilidade.</div>
         </div>
     </footer>
-
     <script src="./js/script.js"></script>
 </body>
-
 </html>
