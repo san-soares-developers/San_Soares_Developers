@@ -1,8 +1,5 @@
 /* Reset e Variáveis Globais */
 * {
-
-    
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -62,26 +59,11 @@ nav {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* nav {
-    top: 0;
-    z-index: 100;
-    position: sticky;
-    border-top: none;
-    border-left: none;
-    border-right: none; */
-    /* Afasta todo o conteúdo de baixo, criando a distância desejada */
-    /* margin-bottom: 40px; 
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    background-color: rgba(255, 255, 255, 0.9);
-} */
-
-
 .menu-hamburger {
     display: none;
 }
 
-.logo-containe {
+.logo-container {
     display: flex;
     position: relative;
     align-items: center;
