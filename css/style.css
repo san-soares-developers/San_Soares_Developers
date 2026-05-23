@@ -68,10 +68,10 @@ nav {
     left: 1rem; 
     height: 130px;
     transform: translateY(-3%);
-    background-size: cover;       
+    /* background-size: cover;       
     background-position: center;   
     background-repeat: no-repeat;  
-    background-image: url('../img/logo.png'); 
+    background-image: url('../img/logo.png');  */
 }
 
 
