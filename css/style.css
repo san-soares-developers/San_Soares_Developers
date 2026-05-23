@@ -105,10 +105,16 @@ text-decoration: none;
     box-shadow: none; /* Remove sombras pesadas para manter o visual limpo */
 }
 
+/* Quando o JavaScript injetar a classe .active, o menu acende de forma limpa */
+.nav-links.active {
+    display: flex !important;
+    opacity: 1;
+}
+
 /* Garante que o ícone acompanhe o alinhamento perfeito */
 .nav-links a i {
-    font-size: 1.1rem;
     width: 24px; /* Fixa a largura do ícone para os textos ficarem alinhados em linha reta */
+    font-size: 1.1rem;
     text-align: center;
 }
 
