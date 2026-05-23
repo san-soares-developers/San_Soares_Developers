@@ -86,21 +86,27 @@ nav {
     font-weight: 700;
     color: var(--text-main);
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Borda arredondada padrão do link */
     padding: 1px 15px;
     height: 40px;
     display: flex;
     align-items: center;
-    /* Alinha o ícone e o texto horizontalmente para a esquerda */
-    justify-content: flex-start; 
-    /* Cria um espaçamento cirúrgico de 10px entre o ícone e o texto */
-    gap: 10px; 
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    gap: 12px; /* Respiro simétrico entre o ícone e a palavra */
+    transition: all 0.15s ease; /* Transição rápida e suave ao passar o mouse */
 }
 
-/* Controla o tamanho e o alinhamento exato de qualquer ícone do Font Awesome no link */
+/* O Efeito de Toque/Hover com fundo cinza arredondado */
+.nav-links a:hover {
+    color: #0f172a; /* Mantém o texto escuro e nítido sobre o fundo claro */
+    background-color: #f1f5f9; /* Fundo cinza moderno e discreto (padrão Tailwind) */
+    box-shadow: none; /* Remove sombras pesadas para manter o visual limpo */
+}
+
+/* Garante que o ícone acompanhe o alinhamento perfeito */
 .nav-links a i {
-    font-size: 1.2rem;
-    width: 24px; /* Fixa uma largura para todos os ícones alinharem verticalmente em linha reta */
+    font-size: 1.1rem;
+    width: 24px; /* Fixa a largura do ícone para os textos ficarem alinhados em linha reta */
     text-align: center;
 }
 
