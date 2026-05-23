@@ -127,10 +127,11 @@ nav {
     height: 65vh;
     display: flex;
     color: #ffffff;
+    position: relative;
     text-align: center;
     align-items: center;
-    justify-content: end;
     flex-direction: column;
+    justify-content: center;
     /* Propriedades para travar a imagem sem distorcer em nenhuma tela */
     background-size: cover;       /* Força a imagem a preencher todo o banner */
     background-position: center;   /* Mantém o "S" rigorosamente centralizado */
@@ -192,8 +193,9 @@ nav {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
 } 
 
-.hero-description {
+.hero-description { border-bottom: 2px solid rgb(255, 2, 2);
     height: 120px;
+    width: 100%;
     display: flex;
     padding: 0 1rem;
     font-size: 1.5rem;
@@ -520,7 +522,6 @@ footer {
     
     .hero-banner { 
         height: 28vh;
-        position: relative;
         border-bottom: 3px solid var(--primary);
     }
     
@@ -528,12 +529,16 @@ footer {
         gap: 10px;
     }
     
+    .hero-buttom {border-bottom: 2px solid #ff0000;
+        gap: 10px;
+    }
+    
     .btn-primary {
-        top: 175%;
+        top: 100%;
         font-size: 0.9rem;
         padding: 12px 25px;
         position: absolute;
-        transform: translate( 0, -30% );
+        transform: translate( 70%, 135% );
     }
     
     .hero-title {
@@ -543,14 +548,12 @@ footer {
     .hero-description { 
         left: 0;
         width: 60%;
-        height: 90px;
         display: flex;
-        padding: 0 0.7rem;
         font-size: 0.85rem;
         align-items: start;
         flex-direction: column;
         justify-content: start;
-        transform: translateX(-31%);
+        transform: translateX(-30%);
     }
     
     .section {
