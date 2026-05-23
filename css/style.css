@@ -74,12 +74,36 @@ nav {
     justify-content: space-around;
 }
 
-.nav-links a { border: 2px solid #ff0000;
+/* .nav-links a { border: 2px solid #ff0000;
     width: 30%;
     list-style: none;
     border-radius: 4px;
     text-decoration: none;
+} */
+
+.nav-links a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 1px 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /* Alinha o ícone e o texto horizontalmente para a esquerda */
+    justify-content: flex-start; 
+    /* Cria um espaçamento cirúrgico de 10px entre o ícone e o texto */
+    gap: 10px; 
 }
+
+/* Controla o tamanho e o alinhamento exato de qualquer ícone do Font Awesome no link */
+.nav-links a i {
+    font-size: 1.2rem;
+    width: 24px; /* Fixa uma largura para todos os ícones alinharem verticalmente em linha reta */
+    text-align: center;
+}
+
 
 
 .logo-container { border: 2px solid #ff0000;
