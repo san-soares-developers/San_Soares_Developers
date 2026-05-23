@@ -88,7 +88,7 @@ text-decoration: none;
     text-decoration: none;
     border: none;
     border-radius: 6px; /* Borda arredondada padrão do link */
-    padding: 1px 15px;
+    /* padding: 1px 15px; */
     height: 40px;
     display: flex;
     align-items: center;
