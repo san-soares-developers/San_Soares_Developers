@@ -92,7 +92,7 @@ text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-    gap: 12px; /* Respiro simétrico entre o ícone e a palavra */
+    gap: 20px; /* Respiro simétrico entre o ícone e a palavra */
     transition: all 0.15s ease; /* Transição rápida e suave ao passar o mouse */
 }
 
