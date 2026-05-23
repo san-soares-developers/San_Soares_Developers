@@ -75,13 +75,13 @@ nav {
 }
 
 /* .nav-links a { border: 2px solid #ff0000;
-    width: 30%;
-    list-style: none;
-    border-radius: 4px;
-    text-decoration: none;
+list-style: none;
+border-radius: 4px;
+text-decoration: none;
 } */
 
 .nav-links a {
+    width: 30%;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-main);
