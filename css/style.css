@@ -163,7 +163,6 @@ nav {
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
-
 /* Banner com Fundo Premium de Alta Tecnologia (Leve e Claro) */
 .hero-banner {
     height: 65vh;
@@ -173,17 +172,19 @@ nav {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    /* Propriedades para travar a imagem sem distorcer em nenhuma tela */
-    background-size: cover;       /* Força a imagem a preencher todo o banner */
-    background-position: center;   /* Mantém o "S" rigorosamente centralizado */
-    background-repeat: no-repeat;  /* Impede a imagem de duplicar em telas grandes */
+    
+    /* MODIFICAÇÃO DE OURO: 'contain' diminui o zoom e força a imagem dos tijolos a aparecer inteira */
+    background-size: contain;       
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-color: #a48261; /* Preenche as laterais com a cor média do tijolo se a tela for ultra larga */
+    
     border-bottom: 7px solid var(--primary);
     background-image: url('../img/banner.jpg');    
 }
 
-.hero-title{
-    width:100%;
+.hero-title {
+    width: 100%;
     font-weight: 800;
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -191,36 +192,38 @@ nav {
     letter-spacing: -1px;
 }
 
-/* .hero-buttom {
+.hero-buttom {
     width: 100%;
+    height: 100%; /* Ocupa a altura total do banner para podermos empurrar o botão */
     display: flex;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
-} */
+    justify-content: flex-end; /* Empurra o botão de forma natural para a base do banner */
+    padding-bottom: 2rem; /* Controla o respiro do botão em relação à borda verde de baixo */
+} 
 
 /* Botão de Ação Premium */
 .btn-primary {
-    top: 91%;
-    left: 50%;
+    /* CORREÇÃO: Arrancamos o position absolute/top/left que quebrava o alinhamento */
     border: none;
     cursor: pointer;
     color: #ffffff;
     font-size: 1rem;
     font-weight: 700;
-    position: absolute;
     padding: 15px 35px;
     border-radius: 6px;
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
-    transition: all 0.7s ease;
+    
+    /* Suaviza o efeito do hover sem dar trancos */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
     background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    
+    /* Empurra o botão para encaixar exatamente abaixo da linha 'Web • Mobile • Desktop' da imagem */
+    margin-top: auto; 
 }
 
 .btn-primary:hover {
-    transform: translate(4px);
+    /* Efeito de subir de leve (2px) de forma confortável e macia */
+    transform: translateY(-2px); 
     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
