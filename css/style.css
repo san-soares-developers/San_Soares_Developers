@@ -420,9 +420,9 @@ footer {
     .menu-hamburger {      border: 2px solid #ff0000;
         margin: 0;
         padding: 0;
-        width: 30px;
+        width: 32px;
         z-index: 110;
-        height: 22px;
+        height: 24px;
         border: none;
         display: flex;
         cursor: pointer;
@@ -463,26 +463,24 @@ footer {
         background-color: #ef4444 !important;
     }
     
-    .nav-links {         border: 2px solid #ff0000;
+    .nav-links {
+        display: none; /* CORREÇÃO: Começa escondido de fábrica no celular */
         gap: 15px;
         padding: 20px;
-        display: flex; /* Esconde os links de fábrica no celular */
         position: absolute;
         flex-direction: column;
         background-color: #ffffff;
         top: 70px; left: 0; right: 0;
         border-bottom: 2px solid var(--primary);
         box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+        z-index: 100; /* Garante que o menu desce por cima do banner do site */
     }
-
-    /* Classe dinâmica que o JavaScript vai injetar ao clicar */
+    
+    /* Classe dinâmica que o JavaScript injeta no clique */
     .nav-links.active {
-        margin: 0;
-        display: flex; /* Faz o menu descer na tela */
-        width: 100%;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--border-color);
+        display: flex !important; /* Força o menu a aparecer na tela */
     }
+    
 
     .hero-banner { 
         height: 28vh;
