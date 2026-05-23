@@ -465,7 +465,7 @@ footer {
     }
     
     /* CSS interno da Media Query (Abaixo de 768px) */
-    .menu-hamburger {      border: 2px solid #ff0000;
+    .menu-hamburger {
         margin: 0;
         padding: 0;
         width: 32px;
@@ -544,7 +544,6 @@ footer {
         transition: all 0.2s ease;
     }
 
-    /* Ajuste para o ícone fixar o alinhamento no centro junto com a palavra */
     .nav-links a i {
         width: 24px;
         font-size: 1.2rem;
@@ -585,7 +584,6 @@ footer {
         transform: none; 
     }
 
-    /* Hover totalmente estável, macio e aveludado ao toque */
     .btn-primary:hover {
         transform: translateY(-2px); 
         box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
@@ -668,15 +666,12 @@ footer {
         padding: 0 3rem;
     }
 
-    /* .logo-container {
-        display: none;
-    } */
-    
     .logo-topo {
-        height: 28px !important; /* Escala para telas mini */
+        height: 28px; /* Escala para telas mini */
     }
+
     .logo-text {
-        font-size: 0.9rem !important;
+        font-size: 0.9rem;
     }
 
     .nav-links {
@@ -703,7 +698,7 @@ footer {
 
     .hero-description {
         font-size: 0.7rem;
-        padding: 0 10px !important;
+        padding: 0 10px;
     }
 
     /* 3. Ajuste dos Cards e Soluções (Aproveitamento total da tela cheia) */
@@ -754,16 +749,23 @@ footer {
     }
     
     .hero-title {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+    }
+
+
+    .hero-contains {
+        gap: 0;
+        padding-bottom: 0;
     }
 
     .hero-description  p {
         display: none;
     }
-    
+   
     .btn-primary {
-        /* width: 90%;
-        transform: translate(-70%, 130%); */
+        top: 160%;
+        left: 5%;
+        width: 90%;       
     }
 
 }
