@@ -74,19 +74,17 @@ nav {
     justify-content: space-around;
 }
 
-/* .nav-links a { border: 2px solid #ff0000;
-list-style: none;
-border-radius: 4px;
-text-decoration: none;
-} */
-
 .nav-links a {
     width: 30%;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-main);
     text-decoration: none;
-    border: none;
+    
+    /* CORREÇÃO 1: Troca o 'none' por uma borda transparente fixa */
+    /* Isso impede os ícones de sambarem ou darem pulos na tela */
+    border: 1px solid transparent; 
+    
     border-radius: 6px; /* Borda arredondada padrão do link */
     /* padding: 1px 15px; */
     height: 40px;
@@ -94,7 +92,10 @@ text-decoration: none;
     align-items: center;
     justify-content: flex-start; /* Alinha o conteúdo à esquerda */
     gap: 20px; /* Respiro simétrico entre o ícone e a palavra */
-    transition: all 0.15s ease; /* Transição rápida e suave ao passar o mouse */
+    
+    /* CORREÇÃO 2: Limita a transição estritamente ao fundo e à cor */
+    /* Isso mata o flash ou colapso de bordas negras fantasmas */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 /* O Efeito de Toque/Hover com fundo cinza arredondado */
@@ -117,7 +118,6 @@ text-decoration: none;
     font-size: 1.1rem;
     text-align: center;
 }
-
 
 
 .logo-container { border: 2px solid #ff0000;
