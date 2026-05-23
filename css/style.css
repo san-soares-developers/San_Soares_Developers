@@ -393,17 +393,18 @@ footer {
         gap: 1rem;
         width: 100%;
         display: flex;
-        padding: 0.5rem 0;
+        position: sticky;
         align-items: center;
         flex-direction: row; 
+        padding: 0.3rem 2rem 0;
         justify-content: space-between; /* Garante que o logo fique à esquerda e o hambúrguer à direita */
     }
     
     .logo-container {
         width: 8%; 
-        left: 10px; 
+        left: 1rem; 
         height: 60px;
-        transform: translateY(-1%);
+        transform: translateY(-3%);
         background-size: cover;       
         background-position: center;   
         background-repeat: no-repeat;  
@@ -448,7 +449,7 @@ footer {
     
     /* Gira a linha de cima para baixo */
     .menu-hamburger.active .linha-hamburger:nth-child(1) {
-        transform: translateY(9px) rotate(45deg) !important;
+        transform: translateY(10px) rotate(45deg) !important;
         background-color: #ef4444 !important; /* Vermelho vibrante de fechamento */
     }
 
@@ -459,13 +460,14 @@ footer {
 
     /* Gira a linha de baixo para cima */
     .menu-hamburger.active .linha-hamburger:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg) !important;
+        transform: translateY(-10px) rotate(-45deg) !important;
         background-color: #ef4444 !important;
     }
     
     .nav-links {
         display: none; /* CORREÇÃO: Começa escondido de fábrica no celular */
         gap: 15px;
+        width: 30%;
         padding: 20px;
         position: absolute;
         flex-direction: column;
@@ -475,13 +477,35 @@ footer {
         box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
         z-index: 100; /* Garante que o menu desce por cima do banner do site */
     }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-main);
+        list-style: none;
+        text-decoration: none;
+        border-radius: 4px;
+        padding: 1px 15px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .nav-links a:hover {
+        color: #fff;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+        background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    
+    }
     
     /* Classe dinâmica que o JavaScript injeta no clique */
     .nav-links.active {
-        display: flex !important; /* Força o menu a aparecer na tela */
+        display: flex; /* Força o menu a aparecer na tela */
     }
     
-
     .hero-banner { 
         height: 28vh;
         width: 100%;
