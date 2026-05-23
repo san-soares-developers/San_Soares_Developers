@@ -15,43 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
             window.open("https://wa.me/" + numeroTelefone + "?text=" + mensagemTexto, "_blank");
         });
     }
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        const btnHamburger = document.getElementById("btn-hamburger");
-        const menuLinks = document.getElementById("menu-links");
-        const linksWhats = document.querySelectorAll(".link-whats");
-
-        // 1. Abre e fecha o menu hambúrguer ao clicar nas 3 barrinhas
-        if (btnHamburger && menuLinks) {
-            btnHamburger.addEventListener("click", function () {
-                menuLinks.classList.toggle("active");
-            });
-        }
-
-        // 2. Faz todos os 3 links do menu dispararem a função do WhatsApp
-        linksWhats.forEach(function (link) {
-            link.addEventListener("click", function (evento) {
-                evento.preventDefault(); // Impede a página de pular para o topo
-                const numeroTelefone = "5511946666328";
-                // const numeroTelefone = "+5511931321975";
-                const mensagemTexto = encodeURIComponent("Olá, gostaria de solicitar uma consultoria técnica sobre as soluções SaaS da San Soares Developers.");
-                window.open("https://wa.me" + numeroTelefone + "?text=" + mensagemTexto, "_blank");
-            });
-        });
-    });
 
     document.addEventListener("DOMContentLoaded", function () {
+        console.log("--> SISTEMA DE CLIQUE ATIVADO COM SUCESSO!");
+
         const botaoHamburger = document.getElementById("btn-hamburger");
         const menuGaveta = document.getElementById("menu-links");
 
         if (botaoHamburger && menuGaveta) {
             botaoHamburger.addEventListener("click", function () {
-                // Dispara o efeito visual do X Vermelho no botão
+                console.log("--> BOTAO CLICADO! ALTERNANDO CLASSES...");
+
+                // Ativa/Desativa o X Vermelho no botão
                 botaoHamburger.classList.toggle("active");
 
-                // Dispara a abertura e fechamento da gaveta de links
+                // Ativa/Desativa a descida da gaveta de links
                 menuGaveta.classList.toggle("active");
             });
+        } else {
+            console.log("--> ERRO: Elementos não encontrados na tela. Verifique os IDs do HTML.");
         }
     });
     
