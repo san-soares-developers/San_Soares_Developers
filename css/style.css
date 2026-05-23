@@ -64,69 +64,61 @@ nav {
 .menu-hamburger {
     display: none;
 }
-
 .nav-links {
     width: 35%;
-    opacity: 0;               /* Começa invisível */
     gap: 0.5rem;
-    display: flex;
-    height: 2rem;
-    align-items: center;
-    pointer-events: none;     /* Desativa os cliques enquanto estiver invisível */
-    transform: translateY(-10px); /* Começa 10px recuado para cima */
-    justify-content: space-around;
+    display: none; /* Inicia limpo e escondido no celular */
+    position: absolute;
+    flex-direction: column;
+    background-color: #ffffff;
+    top: 70px; left: 0; right: 0;
+    border-bottom: 2px solid var(--primary);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+    z-index: 100;
+    padding: 15px;
     
-    /* O SEGREDO DA MACIEZ: Transição com amortecimento de mola (Ease Out Back) */
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                opacity 0.3s ease;
+    /* Transição linear limpa e veloz nativa */
+    transition: opacity 0.2s ease-in-out;
 }
 
-/* .nav-links a { border: 2px solid #ff0000;
-list-style: none;
-border-radius: 4px;
-text-decoration: none;
-} */
+/* Quando o JavaScript injetar a classe .active, o menu acende de forma limpa */
+.nav-links.active {
+    display: flex !important;
+    opacity: 1;
+}
 
 .nav-links a {
-    width: 30%;
+    width: 100%; /* Força o link a ocupar a largura total do menu de forma macia */
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-main);
     text-decoration: none;
-    border-radius: 6px; /* Borda arredondada padrão do link */
+    border-radius: 6px; 
     padding: 1px 15px;
-    height: 40px;
+    height: 45px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-    gap: 20px; /* Respiro simétrico entre o ícone e a palavra */
-    /* Mantenha suas fontes e paddings, mas certifique-se de que a transição está assim: */
-    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-                color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: flex-start; 
+    gap: 20px; 
+    
+    /* O SEGREDO DA MACIEZ: Efeito aveludado suave ao passar o mouse */
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* O Efeito de Toque/Hover com fundo cinza arredondado */
+/* O Efeito de Toque/Hover macio com fundo cinza e borda sutil */
 .nav-links a:hover {
     border: 1px solid var(--primary);
-    color: #0f172a; /* Mantém o texto escuro e nítido sobre o fundo claro */
-    background-color: #f1f5f9; /* Fundo cinza moderno e discreto (padrão Tailwind) */
-    box-shadow: none; /* Remove sombras pesadas para manter o visual limpo */
-}
-
-/* Quando o JavaScript injetar a classe .active, o menu desliza para baixo acendendo suavemente */
-.nav-links.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0); /* Volta para a posição original flutuando */
+    color: #0f172a; 
+    background-color: #f1f5f9; 
+    box-shadow: none; 
 }
 
 /* Garante que o ícone acompanhe o alinhamento perfeito */
 .nav-links a i {
     font-size: 1.1rem;
-    width: 24px; /* Fixa a largura do ícone para os textos ficarem alinhados em linha reta */
+    width: 24px; 
     text-align: center;
 }
-
 
 
 .logo-container { border: 2px solid #ff0000;
