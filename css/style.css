@@ -64,9 +64,9 @@ nav {
 }
 
 .logo-container { border: 2px solid #ff0000;
-    width: 10%; 
+    width: 8%; 
     left: 1rem; 
-    height: 70px;
+    height: 100px;
     transform: translateY(-3%);
     background-size: cover;       
     background-position: center;   
