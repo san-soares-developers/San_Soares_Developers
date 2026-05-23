@@ -319,7 +319,7 @@ nav {
     color: var(--text-muted);
 }
 
-.solutions { border-top: 2px solid #ff0000;
+.solutions {
     display: flex;
     max-width: 100%;
     text-align: center;
@@ -332,7 +332,7 @@ nav {
 }
 
 /* Grid de 6 Produtos Disponíveis */
-.grid-solutions { border-top: 2px solid #ff0000;
+.grid-solutions {
     gap: 40px;
     width: 85%;
     display: grid;
