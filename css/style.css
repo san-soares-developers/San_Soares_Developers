@@ -747,6 +747,11 @@ footer {
     .logo-text {
         font-size: 1rem; 
     }
+
+    .nav-links {
+        width: 35%; /* Ajustado levemente para dar margem confortável aos ícones */
+        top: 50px;  
+    }
     
     .hero-title {
         font-size: 0.7rem;
