@@ -70,7 +70,7 @@ nav {
 
 
 .logo-container { border: 2px solid #ff0000;
-    width: 8%; 
+    width: 25%; 
     left: 1rem;
     height: 30px;
 
@@ -90,7 +90,7 @@ nav {
 }
 
 .logo-text {        border: 2px solid #ff0000;
-    width: 50%;
+    width: 35%;
     /* font-size: 2rem; */
     font-weight: 800;
     text-align: center;
