@@ -47,10 +47,11 @@ nav {
     margin: 0 auto;
 }
 
-.main-nav { 
+.main-nav {  border: 2px solid #ff0000;
     display: flex;
-    padding: 25px 0;
-    align-items: center;    
+    padding: 15px 0;
+    text-align: center;    
+    align-items: center;
     /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
     justify-content: space-around;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);    
@@ -63,17 +64,17 @@ nav {
     display: none;
 }
 
+.nav-links { border: 2px solid #ff0000;
+
+}
+
+
 .logo-container { border: 2px solid #ff0000;
     width: 8%; 
     left: 1rem; 
     height: 130px;
     transform: translateY(-3%);
-    /* background-size: cover;       
-    background-position: center;   
-    background-repeat: no-repeat;  
-    background-image: url('../img/logo.png');  */
 }
-
 
 /* Força a logo do topo a ficar quadrada e recortada de forma nítida */
 .logo-topo {
@@ -85,7 +86,7 @@ nav {
     border-radius: 4px;
 }
 
-.logo-text {
+.logo-text {        border: 2px solid #ff0000;
     width: 50%;
     /* font-size: 2rem; */
     font-weight: 800;
