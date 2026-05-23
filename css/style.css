@@ -71,9 +71,7 @@ nav {
 
 .logo-container { border: 2px solid #ff0000;
     width: 8%; 
-    left: 1rem; 
-    height: 130px;
-    transform: translateY(-3%);
+
 }
 
 /* Força a logo do topo a ficar quadrada e recortada de forma nítida */
