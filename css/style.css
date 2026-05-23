@@ -180,11 +180,12 @@ nav {
 
 .hero-contains{ 
     display: flex;
-    font-size: 1.3rem;
     line-height: 1.6;
+    font-size: 1.3rem;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 0.7rem;
     flex-direction: column;
+    justify-content: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);    
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
     /* Isso empurra o início do desfoque para baixo, sumindo com a linha do topo! */
