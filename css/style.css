@@ -104,7 +104,7 @@ text-decoration: none;
 
 /* O Efeito de Toque/Hover com fundo cinza arredondado */
 .nav-links a:hover {
-    border: 1px solid var(--primary);
+    /* border: 1px solid var(--primary); */
     color: #0f172a; /* Mantém o texto escuro e nítido sobre o fundo claro */
     background-color: #f1f5f9; /* Fundo cinza moderno e discreto (padrão Tailwind) */
     box-shadow: none; /* Remove sombras pesadas para manter o visual limpo */
