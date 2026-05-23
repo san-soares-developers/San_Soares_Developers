@@ -175,11 +175,8 @@ nav {
     
     /* MODIFICAÇÃO DE OURO: 'contain' diminui o zoom e força a imagem dos tijolos a aparecer inteira */
     background-size: cover; /* Diminui o zoom para 85% da largura da tela e ajusta a altura automaticamente */      
-    /* background-size: 90% auto; Diminui o zoom para 85% da largura da tela e ajusta a altura automaticamente       */
     background-position: center;   
-    background-repeat: no-repeat;  
-    background-color: #a48261; /* Preenche as laterais com a cor média do tijolo se a tela for ultra larga */
-    
+    background-repeat: no-repeat;     
     border-bottom: 7px solid var(--primary);
     background-image: url('../img/banner.jpg');    
 }
@@ -202,9 +199,17 @@ nav {
     padding-bottom: 2rem; /* Controla o respiro do botão em relação à borda verde de baixo */
 } 
 
-/* Botão de Ação Premium */
+/* Botão de Ação Premium - Centralização Absoluta Estável */
 .btn-primary {
-    /* CORREÇÃO: Arrancamos o position absolute/top/left que quebrava o alinhamento */
+    position: absolute;
+    
+    /* 1. Trava o botão na base do banner, exatamente onde você desenhou o retângulo */
+    top: calc(100% - 70px); 
+    
+    /* 2. O truque sênior definitivo para centralizar qualquer elemento absoluto no meio do mundo */
+    left: 50%;
+    transform: translateX(-50%); 
+    
     border: none;
     cursor: pointer;
     color: #ffffff;
@@ -213,18 +218,18 @@ nav {
     padding: 15px 35px;
     border-radius: 6px;
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
-    
-    /* Suaviza o efeito do hover sem dar trancos */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; 
     background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
     
-    /* Empurra o botão para encaixar exatamente abaixo da linha 'Web • Mobile • Desktop' da imagem */
-    margin-top: auto; 
+    /* Garante que o botão fique acima de qualquer malha de fundo */
+    z-index: 10; 
+    
+    /* Transição macia que você pediu nos turnos passados */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
+/* Hover macio mantendo a centralização horizontal intocada */
 .btn-primary:hover {
-    /* Efeito de subir de leve (2px) de forma confortável e macia */
-    transform: translateY(-2px); 
+    transform: translate(-50%, -3px); /* Mantém o meio (50%) e sobe 3px de leve */
     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
