@@ -66,13 +66,18 @@ nav {
 }
 
 .nav-links { border: 2px solid #ff0000;
-    gap: 0.5rem;
     width: 40%;
+    gap: 0.5rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
 .nav-links a { border: 2px solid #ff0000;
     width: 10%;
-    height: 1rem;
+    border-radius: 4px;
 }
 
 
