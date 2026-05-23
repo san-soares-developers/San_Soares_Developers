@@ -65,14 +65,14 @@ nav {
 }
 
 .nav-links { border: 2px solid #ff0000;
-
+    width: 40%;
 }
 
 
 .logo-container { border: 2px solid #ff0000;
     width: 8%; 
     height: 30px;
-    
+
 
 }
 
