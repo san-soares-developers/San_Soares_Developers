@@ -121,7 +121,7 @@ nav {
     /* CORREÇÃO: Removemos transform, left e absolute que quebravam o grid */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 12px; /* Cria o respiro exato entre a imagem e o quadrado do S */
 }
 
@@ -440,12 +440,6 @@ footer {
         margin: 0 auto;
     }
 
-    /* Aplica o respiro e distanciamento sênior entre o menu e o banner */
-    nav {
-        /* Afasta todo o conteúdo de baixo, criando a distância desejada */
-        margin-bottom: 10px; 
-    }
-    
     .main-nav { 
         gap: 1rem;
         width: 100%;
@@ -458,16 +452,16 @@ footer {
     }
     
     .logo-container {
-        width: 4%; 
-        left: 3rem; 
+        margin-bottom: 0.2rem;
         transform: translateY(-50%, -50%);
    }
     
+   .logo-topo {
+        height: 35px;
+    }
+
     .logo-text {
-        width: 70%;
-        font-size: 1.25rem; 
-        text-align: center; 
-        justify-content: flex-start;
+        font-size: 1.1rem !important; /* Diminui a fonte para caber na linha */
     }
     
     /* CSS interno da Media Query (Abaixo de 768px) */
@@ -518,49 +512,55 @@ footer {
     }
     
     .nav-links {
+        left: 0; 
+        top: 45px; 
+        gap: 10px;
+        width: 25%; /* Ajustado levemente para dar margem confortável aos ícones */
+        height: auto; 
         display: none; /* CORREÇÃO: Começa escondido de fábrica no celular */
-        gap: 15px;
-        width: 30%;
-        padding: 20px;
+        padding: 3px;
+        z-index: 100; /* Garante que o menu desce por cima do banner do site */
         position: absolute;
         flex-direction: column;
-        background-color: #ffffff;
-        top: 70px; left: 0; right: 0;
+        background-color: #ffffff; /* Fundo branco agora vai descer até o final */
         border-bottom: 2px solid var(--primary);
         box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
-        z-index: 100; /* Garante que o menu desce por cima do banner do site */
     }
 
     .nav-links a {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--text-main);
-        list-style: none;
-        text-decoration: none;
-        border-radius: 4px;
-        padding: 1px 15px;
-        height: 40px;
+        gap: 0.75rem;
+        width: 100%;
+        height: 39px;
         display: flex;
+        font-weight: 700;
+        list-style: none;
+        padding: 1px 15px;
+        font-size: 1.1rem;
+        border-radius: 4px;
         align-items: center;
-        text-align: center;
-        justify-content: center;
+        text-decoration: none;
+        color: var(--text-main);
+        justify-content: flex-start; 
+        transition: all 0.2s ease;
     }
 
-    .nav-links a:hover {
-        color: #fff;
-        transition: all 0.2s ease;
+    /* Ajuste para o ícone fixar o alinhamento no centro junto com a palavra */
+    .nav-links a i {
+        width: 24px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .nav-links a:hover, .nav-links a:active {
+        color: #fff !important;
         box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
         background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-    
     }
-    
-    /* Classe dinâmica que o JavaScript injeta no clique */
-    .nav-links.active {
-        display: flex; /* Força o menu a aparecer na tela */
-    }
-    
+
+        
     .hero-banner { 
         height: 28vh;
+        margin-top: 55px;
         position: relative;
         text-align: center;
         align-items: center;
@@ -661,19 +661,16 @@ footer {
         padding: 0 3rem;
     }
 
-    .logo-container {
+    /* .logo-container {
         display: none;
-    }
-
-    .logo-text {
-        font-size: 1rem; 
-    }
-
-    /* .logo-icon-css {
-        width: 20px !important;
-        height: 20px !important;
-        font-size: 11px !important;
     } */
+    
+    .logo-topo {
+        height: 28px !important; /* Escala para telas mini */
+    }
+    .logo-text {
+        font-size: 0.9rem !important;
+    }
 
     .nav-links {
         font-size: 0.9rem;
