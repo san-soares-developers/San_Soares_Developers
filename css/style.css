@@ -355,6 +355,9 @@ nav {
     margin-bottom: 24x;
     color: var(--text-muted);
     margin-bottom: 24px;
+}
+
+.section-contact{
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);    
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
     /* Isso empurra o início do desfoque para baixo, sumindo com a linha do topo! */
