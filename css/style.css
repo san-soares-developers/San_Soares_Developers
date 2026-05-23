@@ -71,6 +71,8 @@ nav {
 
 .logo-container { border: 2px solid #ff0000;
     width: 8%; 
+    height: 30px;
+    
 
 }
 
@@ -88,10 +90,10 @@ nav {
     width: 50%;
     /* font-size: 2rem; */
     font-weight: 800;
-    text-align: right;
+    text-align: center;
+    display: inline-block;
     letter-spacing: -0.5px;
     text-transform: uppercase;
-    display: inline-block;
     
     /* 1. Aplica o mesmo degradê exato do botão (Azul Tecnológico para o Verde Neon) */
     background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
