@@ -48,6 +48,7 @@ nav {
 }
 
 .main-nav {  border: 2px solid #ff0000;
+    gap: 1rem;
     display: flex;
     padding: 30px 0;
     text-align: center;    
@@ -65,7 +66,13 @@ nav {
 }
 
 .nav-links { border: 2px solid #ff0000;
+    gap: 0.5rem;
     width: 40%;
+}
+
+.nav-links a { border: 2px solid #ff0000;
+    width: 10%;
+    height: 1rem;
 }
 
 
