@@ -90,7 +90,7 @@ nav {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: center; /* Alinha o conteúdo à esquerda */
     gap: 20px; /* Respiro simétrico entre o ícone e a palavra */
     
     /* CORREÇÃO 2: Limita a transição estritamente ao fundo e à cor */
