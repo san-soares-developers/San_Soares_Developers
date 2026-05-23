@@ -70,9 +70,10 @@ nav {
     gap: 0.5rem;
     display: flex;
     height: 1.5rem;
+    list-style: none;
     align-items: center;
+    text-decoration: none;
     justify-content: space-around;
-
 }
 
 .nav-links a { border: 2px solid #ff0000;
