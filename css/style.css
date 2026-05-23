@@ -213,7 +213,7 @@ nav {
 }
 
 .section-title {
-    font-size: 26px;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 45px;
     border-left: 5px solid var(--primary);
@@ -244,7 +244,7 @@ nav {
 }
 
 .feature-card {
-    padding: 35px;
+    padding: 0.5rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: #ffffff;
@@ -259,13 +259,13 @@ nav {
 }
 
 .feature-card h3 {
-    font-size: 17px;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .feature-card p {
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--text-muted);
 }
 
@@ -543,7 +543,7 @@ footer {
         height: 90px;
         display: flex;
         padding: 0 0.7rem;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         align-items: start;
         flex-direction: column;
         justify-content: start;
@@ -552,6 +552,11 @@ footer {
     
     .section {
         padding: 1.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
     }
 
     .grid-features {
@@ -563,6 +568,11 @@ footer {
     .feature-card {
         padding: 15px;
     }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+    
 
     .grid-solutions {
         gap: 20px;
@@ -587,7 +597,93 @@ footer {
 
 
 /* Regras específicas de responsividade para Smartphone */
+/* ==========================================================================
+   MÍDIA QUERY PARA SMARTPHONES MENORES (ABAIXO DE 600PX)
+   ========================================================================== */
 @media (max-width: 600px) {
 
+    nav {
+        margin-bottom: 5px; 
+    }
+
+    /* 1. Ajuste do Topo (Evita esmagar os 3 elementos contra o hambúrguer) */
+    .main-nav {
+        height: 50px;
+        padding: 0 3rem;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .logo-text {
+        font-size: 1rem; 
+        letter-spacing: -0.4px;
+    }
+
+    /* .logo-icon-css {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 11px !important;
+    } */
+
+    .nav-links {
+        font-size: 0.9rem;
+        top: 50px; left: 0; right: 0;
+    }
+
+    /* 2. Ajuste do Banner Principal (Hero) */
+    .hero-banner {
+        height: 21vh;
+    }
+
+    .hero-buttom {
+        top:75%;
+    }
+
+    .hero-title  {
+        font-size: 0.60rem;
+    }
+
+    .hero-description {
+        font-size: 0.7rem;
+        padding: 0 10px !important;
+    }
+
+    /* 3. Ajuste dos Cards e Soluções (Aproveitamento total da tela cheia) */
+    .section {
+        padding: 0.7rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 7px;
+    }
+
+    .feature-card {
+        padding: 7px;
+    }
+
+    .feature-card h3 {
+        font-size: 0.80rem;
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+    }
+
+    .sol-body {
+        padding: 1rem;
+    }
+
+    .sol-body ul li {
+        font-size: 0.85rem;
+    }
+    
+    /* Caixa de Contato Comercial */
+    .contact-box {
+        font-size: 0.85rem;
+        padding: 1.1rem 0.9rem;
+    }
 }
 
