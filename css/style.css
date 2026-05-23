@@ -68,7 +68,7 @@ nav {
 }
 
 .nav-links a {
-   
+    width: 30%;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-main);
