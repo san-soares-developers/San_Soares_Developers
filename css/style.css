@@ -50,7 +50,7 @@ nav {
 .main-nav {  border: 2px solid #ff0000;
     gap: 1rem;
     display: flex;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;    
     align-items: center;
     /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
