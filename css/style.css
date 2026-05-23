@@ -50,7 +50,7 @@ nav {
 .main-nav {
     gap: 1rem;
     display: flex;
-    padding: 20px 0;
+    padding: 23px 0;
     text-align: center;    
     align-items: center;
     /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
@@ -135,7 +135,7 @@ nav {
 
 /* Força a logo do topo a ficar quadrada e recortada de forma nítida */
 .logo-topo {
-    top: -12px; /* Ajuste fino para alinhar perfeitamente com o texto */
+    top: -10px; /* Ajuste fino para alinhar perfeitamente com o texto */
     width: auto;
     height: 75px;
     object-fit: contain;
