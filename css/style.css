@@ -149,7 +149,7 @@ nav {
 }
 
 .hero-buttom {
-    gap: 15px;
+    width: 100%;
     display: flex;
     font-size: 1rem;
     font-weight: 700;
@@ -520,7 +520,6 @@ footer {
     
     .hero-banner { 
         height: 28vh;
-        width: 100%;
         position: relative;
         border-bottom: 3px solid var(--primary);
     }
@@ -528,19 +527,13 @@ footer {
     .hero-contains {
         gap: 10px;
     }
-
-    .hero-buttom {
-        top: 100%;
-        width: 50%;
-        right: -30%;
-        position: absolute;
-        transform: translate(-50%, 135%);        
-    }
-
+    
     .btn-primary {
-        width: 60%;
+        top: 175%;
         font-size: 0.9rem;
         padding: 12px 25px;
+        position: absolute;
+        transform: translate( 0, -30% );
     }
     
     .hero-title {
@@ -646,8 +639,12 @@ footer {
         height: 21vh;
     }
 
-    .hero-buttom {
-        top:75%;
+    .btn-primary {
+        transform: translate( 0, -0% );
+    }
+
+    .hero-contains {
+        padding-bottom: 0.7rem;
     }
 
     .hero-title  {
@@ -715,9 +712,8 @@ footer {
     }
     
     .btn-primary {
-        width: 90%;
-        transform: translate(-70%, 130%);
+        /* width: 90%;
+        transform: translate(-70%, 130%); */
     }
-
 
 }
