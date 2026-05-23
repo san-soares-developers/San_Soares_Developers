@@ -271,11 +271,11 @@ nav {
     letter-spacing: -0.5px;
 }
 
-.features { border: #ef4444 solid 2px;
+.features {
     display: flex;
+    max-width: 100%;
     text-align: center;
     align-items: center;
-    max-width: 100%;
     justify-content: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
@@ -284,7 +284,7 @@ nav {
 }
 
 /* Grid de 8 Cards com Efeito de Flutuação */
-.grid-features { border: #ef4444 solid 2px;
+.grid-features {
     gap: 40px;
     width: 85%;
     display: grid;
@@ -319,11 +319,11 @@ nav {
     color: var(--text-muted);
 }
 
-.solutions {
+.solutions { border-top: 2px solid #ff0000;
     display: flex;
+    max-width: 100%;
     text-align: center;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);
     /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
@@ -332,11 +332,12 @@ nav {
 }
 
 /* Grid de 6 Produtos Disponíveis */
-.grid-solutions {
+.grid-solutions { border-top: 2px solid #ff0000;
     gap: 40px;
-    width: 100%;
-    padding: 1rem;
+    width: 85%;
     display: grid;
+    padding: 3rem;
+    margin-bottom: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
