@@ -41,12 +41,8 @@ nav {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid var(--border-color);
-    /*
-    padding: 25px 0;
-    */
-    
     /* Afasta todo o conteúdo de baixo, criando a distância desejada */
-    margin-bottom: 60px; 
+    margin-bottom: 40px; 
 }
 
 .container {
@@ -149,7 +145,7 @@ nav {
     letter-spacing: -1px;
 }
 
-.hero-buttom {
+/* .hero-buttom {
     width: 100%;
     display: flex;
     font-size: 1rem;
@@ -158,31 +154,33 @@ nav {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
 /* Botão de Ação Premium */
 .btn-primary {
+    top: 91%;
+    left: 50%;
     border: none;
     cursor: pointer;
     color: #ffffff;
     font-size: 1rem;
     font-weight: 700;
+    position: absolute;
     padding: 15px 35px;
     border-radius: 6px;
-    transition: all 0.2s ease;
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+    transition: all 0.7s ease;
     background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
+    transform: translate(4px);
     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
 .hero-contains{ 
     display: flex;
-    line-height: 1.6;
-    font-size: 1.3rem;
+    line-height: 1.4;
     align-items: center;
     margin-bottom: 0.7rem;
     flex-direction: column;
@@ -193,7 +191,7 @@ nav {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
 } 
 
-.hero-description { border-bottom: 2px solid rgb(255, 2, 2);
+.hero-description {
     height: 120px;
     width: 100%;
     display: flex;
@@ -522,6 +520,10 @@ footer {
     
     .hero-banner { 
         height: 28vh;
+        position: relative;
+        text-align: center;
+        align-items: center;
+        justify-content: end;
         border-bottom: 3px solid var(--primary);
     }
     
@@ -529,16 +531,16 @@ footer {
         gap: 10px;
     }
     
-    .hero-buttom {border-bottom: 2px solid #ff0000;
+    /* .hero-buttom {border-bottom: 2px solid #ff0000;
         gap: 10px;
-    }
+    } */
     
     .btn-primary {
-        top: 100%;
-        font-size: 0.9rem;
-        padding: 12px 25px;
-        position: absolute;
-        transform: translate( 70%, 135% );
+        top: 145%;
+        width: 30%;
+        left: 81%;
+        padding: 15px 35px;
+        transform: translate( -50%, -50% ); 
     }
     
     .hero-title {
