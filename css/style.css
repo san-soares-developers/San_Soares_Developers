@@ -29,17 +29,15 @@ body {
     line-height: 1.6;
     font-size: 1rem;
 }
-
-/* Aplica o respiro e distanciamento sênior entre o menu e o banner */
+/* Aplica o menu fixo indestrutível no topo em qualquer tamanho de tela */
 nav {
     top: 0;
-    z-index: 100; 
-    position: sticky;
+    left: 0;
+    width: 100%; /* Força a barra a ocupar toda a largura do monitor ou celular */
+    z-index: 1000; /* Fica acima de absolutamente tudo no site */
+    position: fixed; /* MUDANÇA: Garante o menu 100% fixo no topo ao rolar a página */
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid var(--border-color);
-    /* Afasta todo o conteúdo de baixo, criando a distância desejada */
-    margin-bottom: 20px; 
 }
 
 .container { 
@@ -48,16 +46,12 @@ nav {
 }
 
 .main-nav {
-    gap: 1rem;
     display: flex;
-    padding: 23px 0;
-    text-align: center;    
     align-items: center;
-    /* 1. Garante que as bordas laterais e superior são ZERO e ativa apenas a inferior */
-    justify-content: space-around;
+    justify-content: space-between; /* Alinhamento sênior: extremidades limpas */
+    padding: 15px 40px; /* Margem interna confortável para o computador */
+    width: 100%;
     border-bottom: 2px solid rgba(255, 255, 255, 0.12);    
-    /* 2. Ajuste sênior da sombra: mudamos o segundo número de 0 para 4px e 8px */
-    /* Isso empurra o início do desfoque para baixo, sumindo com a linha do topo! */
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -119,36 +113,35 @@ nav {
     text-align: center;
 }
 
+/* ==========================================================================
+   AJUSTE DE ALINHAMENTO DO LOGO - PARTE GLOBAL (COMPUTADOR)
+   ========================================================================== */
 
 .logo-container {
-    width: 25%; 
-    left: 1rem;
-    height: 27px;
+    /* CORREÇÃO: Removemos transform, left e absolute que quebravam o grid */
     display: flex;
-    text-align: center;
     align-items: center;
-    justify-content: end;
-    transform: translate( -50%, -50% );
+    justify-content: flex-start;
+    gap: 12px; /* Cria o respiro exato entre a imagem e o quadrado do S */
 }
 
-/* Força a logo do topo a ficar quadrada e recortada de forma nítida */
+/* Força a logo do topo a ficar nítida, proporcional e no fluxo natural */
 .logo-topo {
-    top: -10px; /* Ajuste fino para alinhar perfeitamente com o texto */
+    height: 45px; /* Altura ideal sênior para não estourar os 75px da barra nav */
     width: auto;
-    height: 75px;
     object-fit: contain;
-    position: absolute;
     border-radius: 4px;
+    display: block;
+    /* Arrancamos o position absolute e top negativo que faziam a imagem voar na tela */
 }
 
 .logo-text {
-    width: 35%;
     font-size: 1.5rem;
     font-weight: 800;
-    text-align: center;
     display: inline-block;
     letter-spacing: -0.5px;
     text-transform: uppercase;
+    white-space: nowrap; /* Impede o nome da sua empresa de quebrar em duas linhas */
     
     /* 1. Aplica o mesmo degradê exato do botão (Azul Tecnológico para o Verde Neon) */
     background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
@@ -161,6 +154,7 @@ nav {
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
+
 /* Banner com Fundo Premium de Alta Tecnologia (Leve e Claro) */
 .hero-banner {
     height: 75vh;
@@ -448,8 +442,6 @@ footer {
 
     /* Aplica o respiro e distanciamento sênior entre o menu e o banner */
     nav {
-        display: flex;
-        align-items: center;
         /* Afasta todo o conteúdo de baixo, criando a distância desejada */
         margin-bottom: 10px; 
     }
@@ -466,17 +458,13 @@ footer {
     }
     
     .logo-container {
-        width: 8%; 
-        left: 1rem; 
-        height: 60px;
-        transform: translateY(-3%);
-        background-size: cover;       
-        background-position: center;   
-        background-repeat: no-repeat;  
-        background-image: url('../img/logo.png'); 
-    }
+        width: 4%; 
+        left: 3rem; 
+        transform: translateY(-50%, -50%);
+   }
     
     .logo-text {
+        width: 70%;
         font-size: 1.25rem; 
         text-align: center; 
         justify-content: flex-start;
