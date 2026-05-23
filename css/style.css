@@ -135,7 +135,7 @@ nav {
 
 /* Força a logo do topo a ficar quadrada e recortada de forma nítida */
 .logo-topo {
-    top: -5px; /* Ajuste fino para alinhar perfeitamente com o texto */
+    top: -12px; /* Ajuste fino para alinhar perfeitamente com o texto */
     width: auto;
     height: 75px;
     object-fit: contain;
