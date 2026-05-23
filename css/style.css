@@ -67,11 +67,17 @@ nav {
 
 .nav-links {
     width: 35%;
+    opacity: 0;               /* Começa invisível */
     gap: 0.5rem;
     display: flex;
     height: 2rem;
     align-items: center;
-    justify-content: space-around;
+    pointer-events: none;     /* Desativa os cliques enquanto estiver invisível */
+    transform: translateY(-10px); /* Começa 10px recuado para cima */
+    justify-content: space-around;    
+    /* O SEGREDO DA MACIEZ: Transição com amortecimento de mola (Ease Out Back) */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                opacity 0.3s ease;
 }
 
 /* .nav-links a { border: 2px solid #ff0000;
