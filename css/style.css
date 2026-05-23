@@ -72,6 +72,7 @@ nav {
 .logo-container { border: 2px solid #ff0000;
     width: 8%; 
     height: 30px;
+    transform: translate( -50%, -50% );
 
 
 }
