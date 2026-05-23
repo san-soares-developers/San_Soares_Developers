@@ -174,7 +174,7 @@ nav {
     flex-direction: column;
     
     /* MODIFICAÇÃO DE OURO: 'contain' diminui o zoom e força a imagem dos tijolos a aparecer inteira */
-    background-size: contain;       
+    background-size: cover;       
     background-position: center;   
     background-repeat: no-repeat;  
     background-color: #a48261; /* Preenche as laterais com a cor média do tijolo se a tela for ultra larga */
