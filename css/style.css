@@ -527,7 +527,6 @@ footer {
     
     .hero-contains {
         gap: 10px;
-        padding: 0.5rem;
     }
 
     .hero-buttom {
@@ -535,8 +534,7 @@ footer {
         width: 50%;
         right: -30%;
         position: absolute;
-        transform: translate(-50%, 135%);
-        
+        transform: translate(-50%, 135%);        
     }
 
     .btn-primary {
@@ -630,7 +628,6 @@ footer {
 
     .logo-text {
         font-size: 1rem; 
-        letter-spacing: -0.4px;
     }
 
     /* .logo-icon-css {
@@ -699,3 +696,28 @@ footer {
     }
 }
 
+/* Regras específicas de responsividade para Smartphone */
+/* ==========================================================================
+   MÍDIA QUERY PARA SMARTPHONES MENORES (ABAIXO DE 500PX)
+   ========================================================================== */
+@media (max-width: 500px) {
+
+    .logo-text {
+        font-size: 1rem; 
+    }
+    
+    .hero-title {
+        font-size: 0.9rem;
+    }
+
+    .hero-description  p {
+        display: none;
+    }
+    
+    .btn-primary {
+        width: 90%;
+        transform: translate(-70%, 130%);
+    }
+
+
+}
