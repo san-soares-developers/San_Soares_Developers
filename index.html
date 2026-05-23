@@ -200,5 +200,22 @@
         </div>
     </footer>
     <script src="./js/sansoares.js"></script>
+    <!-- INJETANDO O MOTOR DIRETO NO HTML PARA LIQUIDAR O ERRO DE PASTA -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var botaoHamburger = document.getElementById("btn-hamburger");
+            var menuGaveta = document.getElementById("menu-links");
+
+            if (botaoHamburger && menuGaveta) {
+                botaoHamburger.addEventListener("click", function () {
+                    // Liga/Desliga o X Vermelho no botão
+                    botaoHamburger.classList.toggle("active");
+
+                    // Liga/Desliga a descida da gaveta de links
+                    menuGaveta.classList.toggle("active");
+                });
+            }
+        });
+    </script>
 </body>
 </html>
