@@ -73,7 +73,10 @@ nav {
     width: 25%; 
     left: 1rem;
     height: 30px;
-
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
     transform: translate( -50%, -50% );
 
 
