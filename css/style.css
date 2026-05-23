@@ -63,7 +63,7 @@ nav {
     display: none;
 }
 
-.logo-container {
+.logo-container { border: 2px solid #ff0000;
     display: flex;
     position: relative;
     align-items: center;
