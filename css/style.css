@@ -486,19 +486,19 @@ footer {
     
     /* Gira a linha de cima para baixo */
     .menu-hamburger.active .linha-hamburger:nth-child(1) {
-        transform: translateY(10px) rotate(45deg) !important;
-        background-color: #ef4444 !important; /* Vermelho vibrante de fechamento */
+        transform: translateY(10px) rotate(45deg);
+        background-color: #ef4444; /* Vermelho vibrante de fechamento */
     }
 
     /* Some com a linha do meio */
     .menu-hamburger.active .linha-hamburger:nth-child(2) {
-        opacity: 0 !important;
+        opacity: 0;
     }
 
     /* Gira a linha de baixo para cima */
     .menu-hamburger.active .linha-hamburger:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg) !important;
-        background-color: #ef4444 !important;
+        transform: translateY(-10px) rotate(-45deg);
+        background-color: #ef4444;
     }
     
     .nav-links {
@@ -557,7 +557,7 @@ footer {
         gap: 10px;
     }
     
-    .hero-buttom {border-bottom: 2px solid #ff0000;
+    .hero-buttom {
         gap: 10px;
         width: 100%;
         display: flex;
